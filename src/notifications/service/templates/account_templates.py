@@ -1,5 +1,6 @@
 """Templates for account-level notifications."""
 
+from django.conf import settings
 from django.utils.translation import gettext as _
 
 from notifications.enums import NotificationType
@@ -17,7 +18,7 @@ class AccountBannedTemplate(NotificationTemplate):
 
     def get_email_subject(self, notification: Notification) -> str:
         """Get email subject."""
-        return str(_("Revel - Your account has been suspended"))
+        return str(_("%(site_name)s - Your account has been suspended") % {"site_name": settings.SITE_NAME})
 
 
 # Register templates

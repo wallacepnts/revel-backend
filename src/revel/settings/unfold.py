@@ -3,12 +3,12 @@
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 
-from .base import VERSION
+from .base import SITE_NAME, VERSION
 
 # Unfold configuration
 UNFOLD = {
-    "SITE_TITLE": f"Revel v{VERSION} Admin",
-    "SITE_HEADER": f"Revel v{VERSION} Administration",
+    "SITE_TITLE": f"{SITE_NAME} v{VERSION} Admin",
+    "SITE_HEADER": f"{SITE_NAME} v{VERSION} Administration",
     "SITE_URL": "/",
     "DASHBOARD_CALLBACK": "revel.dashboard.dashboard_callback",
     "SHOW_HISTORY": True,
