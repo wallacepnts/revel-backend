@@ -13,7 +13,7 @@ from unittest.mock import MagicMock
 import pytest
 from pytest import MonkeyPatch
 
-from geo.ip2 import get_ip2location
+from geo.ip2 import get_ip2location, resolve_ip_to_point
 
 
 @pytest.fixture(autouse=True)
@@ -102,3 +102,13 @@ def test_get_ip2location_reloads_on_mtime_change(monkeypatch: MonkeyPatch) -> No
     th.join()
 
     assert not errors, errors
+
+
+def test_resolve_ip_to_point_returns_none_when_database_missing(monkeypatch: MonkeyPatch) -> None:
+    """A missing .BIN (fresh deploy/local dev, before the downloader has run) degrades
+    to "unknown location" instead of raising and 500ing the caller."""
+    fake_path = MagicMock()
+    fake_path.stat.side_effect = FileNotFoundError("no such file")
+    monkeypatch.setattr("geo.ip2.conf.IP2LOCATION_DB_PATH", fake_path)
+
+    assert resolve_ip_to_point("8.8.8.8") is None

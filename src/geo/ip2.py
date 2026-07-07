@@ -39,8 +39,8 @@ def get_ip2location() -> IP2Location:
 
 def resolve_ip_to_point(ip: str) -> Point | None:
     """Resolves an IP address to a geographical point."""
-    ipdb = get_ip2location()
     try:
+        ipdb = get_ip2location()
         record = ipdb.get_all(ip)
         if record is None or record.city == "-":
             return None
@@ -49,6 +49,9 @@ def resolve_ip_to_point(ip: str) -> Point | None:
         # warning, not debug: a broken database otherwise fails every lookup
         # invisibly (a corrupt .BIN disabled nearest-first sorting in
         # production for months — the downloader saved the ZIP as the .BIN).
+        # get_ip2location() is now inside the try too: a missing .BIN (fresh
+        # deploy/local dev, before the periodic downloader has run once)
+        # should degrade to "unknown location", not 500 the whole listing.
         logger.warning("ip_resolution_failed", ip=ip, exc_info=True)
         return None
 
