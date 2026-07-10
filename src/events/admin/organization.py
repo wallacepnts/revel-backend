@@ -96,7 +96,8 @@ class OrganizationAdmin(ModelAdmin, UserLinkMixin):  # type: ignore[misc]
                 "fields": [
                     "instagram_url",
                     "facebook_url",
-                    "bluesky_url",
+                    "youtube_url",
+                    "whatsapp_url",
                     "telegram_url",
                 ],
             },

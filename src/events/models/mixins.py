@@ -290,7 +290,8 @@ class UserRequestMixin(TimeStampedModel):
 class SocialMediaMixin(models.Model):
     instagram_url = models.URLField("Instagram", blank=True, null=True)
     facebook_url = models.URLField("Facebook", blank=True, null=True)
-    bluesky_url = models.URLField("Bluesky", blank=True, null=True)
+    youtube_url = models.URLField("YouTube", blank=True, null=True)
+    whatsapp_url = models.URLField("WhatsApp", blank=True, null=True)
     telegram_url = models.URLField("Telegram", blank=True, null=True)
 
     class Meta:

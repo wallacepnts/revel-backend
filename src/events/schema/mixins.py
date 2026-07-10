@@ -116,13 +116,14 @@ class TaggableSchemaMixin(Schema):
 
 
 # Social media URL field names
-_SOCIAL_MEDIA_FIELDS = ("instagram_url", "facebook_url", "bluesky_url", "telegram_url")
+_SOCIAL_MEDIA_FIELDS = ("instagram_url", "facebook_url", "youtube_url", "whatsapp_url", "telegram_url")
 
 # Social media platform URL patterns for validation
 _SOCIAL_MEDIA_PATTERNS: dict[str, tuple[str, ...]] = {
     "instagram_url": ("instagram.com", "www.instagram.com"),
     "facebook_url": ("facebook.com", "www.facebook.com", "fb.com", "www.fb.com"),
-    "bluesky_url": ("bsky.app", "bsky.social"),
+    "youtube_url": ("youtube.com", "www.youtube.com", "m.youtube.com", "youtu.be"),
+    "whatsapp_url": ("wa.me", "whatsapp.com", "www.whatsapp.com", "chat.whatsapp.com", "api.whatsapp.com"),
     "telegram_url": ("t.me", "telegram.me", "telegram.dog"),
 }
 
@@ -158,7 +159,8 @@ class SocialMediaSchemaRetrieveMixin(Schema):
 
     instagram_url: str | None = None
     facebook_url: str | None = None
-    bluesky_url: str | None = None
+    youtube_url: str | None = None
+    whatsapp_url: str | None = None
     telegram_url: str | None = None
 
 
@@ -171,7 +173,8 @@ class SocialMediaSchemaEditMixin(Schema):
 
     instagram_url: AnyUrl | None = None
     facebook_url: AnyUrl | None = None
-    bluesky_url: AnyUrl | None = None
+    youtube_url: AnyUrl | None = None
+    whatsapp_url: AnyUrl | None = None
     telegram_url: AnyUrl | None = None
 
     @field_validator(*_SOCIAL_MEDIA_FIELDS, mode="before")

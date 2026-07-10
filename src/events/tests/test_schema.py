@@ -19,9 +19,13 @@ class TestSocialMediaSchemaEditMixin:
             ("facebook_url", "https://www.facebook.com/page"),
             ("facebook_url", "https://fb.com/page"),
             ("facebook_url", "https://www.fb.com/page"),
-            # Bluesky valid URLs
-            ("bluesky_url", "https://bsky.app/profile/user.bsky.social"),
-            ("bluesky_url", "https://bsky.social/user"),
+            # YouTube valid URLs
+            ("youtube_url", "https://youtube.com/@channel"),
+            ("youtube_url", "https://www.youtube.com/@channel"),
+            ("youtube_url", "https://youtu.be/abc123"),
+            # WhatsApp valid URLs
+            ("whatsapp_url", "https://wa.me/5511999999999"),
+            ("whatsapp_url", "https://chat.whatsapp.com/abc123"),
             # Telegram valid URLs
             ("telegram_url", "https://t.me/username"),
             ("telegram_url", "https://telegram.me/username"),
@@ -45,10 +49,12 @@ class TestSocialMediaSchemaEditMixin:
             ("facebook_url", "https://instagram.com/user", "Facebook"),
             ("facebook_url", "https://twitter.com/user", "Facebook"),
             ("facebook_url", "https://example.com/user", "Facebook"),
-            # Bluesky invalid URLs
-            ("bluesky_url", "https://twitter.com/user", "Bluesky"),
-            ("bluesky_url", "https://mastodon.social/user", "Bluesky"),
-            ("bluesky_url", "https://example.com/user", "Bluesky"),
+            # YouTube invalid URLs
+            ("youtube_url", "https://vimeo.com/user", "Youtube"),
+            ("youtube_url", "https://example.com/user", "Youtube"),
+            # WhatsApp invalid URLs
+            ("whatsapp_url", "https://telegram.me/user", "Whatsapp"),
+            ("whatsapp_url", "https://example.com/user", "Whatsapp"),
             # Telegram invalid URLs
             ("telegram_url", "https://whatsapp.com/user", "Telegram"),
             ("telegram_url", "https://signal.org/user", "Telegram"),
@@ -68,7 +74,7 @@ class TestSocialMediaSchemaEditMixin:
 
     @pytest.mark.parametrize(
         "field",
-        ["instagram_url", "facebook_url", "bluesky_url", "telegram_url"],
+        ["instagram_url", "facebook_url", "youtube_url", "whatsapp_url", "telegram_url"],
     )
     def test_empty_string_returns_none(self, field: str) -> None:
         """Test that empty strings are converted to None (for DB null=True)."""
@@ -81,7 +87,8 @@ class TestSocialMediaSchemaEditMixin:
         schema = SocialMediaSchemaEditMixin()
         assert schema.instagram_url is None
         assert schema.facebook_url is None
-        assert schema.bluesky_url is None
+        assert schema.youtube_url is None
+        assert schema.whatsapp_url is None
         assert schema.telegram_url is None
 
     def test_multiple_valid_urls(self) -> None:
@@ -90,13 +97,15 @@ class TestSocialMediaSchemaEditMixin:
             {
                 "instagram_url": "https://instagram.com/user",
                 "facebook_url": "https://facebook.com/page",
-                "bluesky_url": "https://bsky.app/profile/user",
+                "youtube_url": "https://youtube.com/@channel",
+                "whatsapp_url": "https://wa.me/5511999999999",
                 "telegram_url": "https://t.me/channel",
             }
         )
         assert schema.instagram_url == AnyUrl("https://instagram.com/user")
         assert schema.facebook_url == AnyUrl("https://facebook.com/page")
-        assert schema.bluesky_url == AnyUrl("https://bsky.app/profile/user")
+        assert schema.youtube_url == AnyUrl("https://youtube.com/@channel")
+        assert schema.whatsapp_url == AnyUrl("https://wa.me/5511999999999")
         assert schema.telegram_url == AnyUrl("https://t.me/channel")
 
     @pytest.mark.parametrize(
@@ -106,7 +115,8 @@ class TestSocialMediaSchemaEditMixin:
             ("instagram_url", "www.instagram.com/user", "https://www.instagram.com/user"),
             ("facebook_url", "facebook.com/page", "https://facebook.com/page"),
             ("facebook_url", "fb.com/page", "https://fb.com/page"),
-            ("bluesky_url", "bsky.app/profile/user", "https://bsky.app/profile/user"),
+            ("youtube_url", "youtube.com/@channel", "https://youtube.com/@channel"),
+            ("whatsapp_url", "wa.me/5511999999999", "https://wa.me/5511999999999"),
             ("telegram_url", "t.me/channel", "https://t.me/channel"),
         ],
     )
@@ -140,12 +150,12 @@ class TestSocialMediaSchemaRetrieveMixin:
         schema = SocialMediaSchemaRetrieveMixin(
             instagram_url="https://example.com/not-instagram",
             facebook_url="https://random-site.org/page",
-            bluesky_url="invalid-url",
+            youtube_url="invalid-url",
             telegram_url="",
         )
         assert schema.instagram_url == "https://example.com/not-instagram"
         assert schema.facebook_url == "https://random-site.org/page"
-        assert schema.bluesky_url == "invalid-url"
+        assert schema.youtube_url == "invalid-url"
         assert schema.telegram_url == ""
 
     def test_all_fields_default_to_none(self) -> None:
@@ -153,7 +163,8 @@ class TestSocialMediaSchemaRetrieveMixin:
         schema = SocialMediaSchemaRetrieveMixin()
         assert schema.instagram_url is None
         assert schema.facebook_url is None
-        assert schema.bluesky_url is None
+        assert schema.youtube_url is None
+        assert schema.whatsapp_url is None
         assert schema.telegram_url is None
 
 
