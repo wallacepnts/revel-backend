@@ -1615,7 +1615,7 @@ msgstr ""
 
 #, python-format
 msgid "Event Updated: %(event)s"
-msgstr ""
+msgstr "Evento atualizado: %(event)s"
 
 #, python-format
 msgid "Important Update: %(event)s"
@@ -2146,7 +2146,7 @@ msgid "Follower Details:"
 msgstr ""
 
 msgid "Event Updated"
-msgstr ""
+msgstr "Evento atualizado"
 
 #, python-format
 msgid "Important update about <strong>%(event)s</strong>"
