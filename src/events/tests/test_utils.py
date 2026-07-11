@@ -402,8 +402,7 @@ class TestFormatEventDatetime:
 
         result = format_event_datetime(dt, event)
 
-        assert "7:00 PM" in result
-        assert "CET" in result
+        assert "19:00" in result
 
     def test_returns_empty_for_none(self, vienna_city: City) -> None:
         event = _mock_event(vienna_city)
@@ -415,8 +414,7 @@ class TestFormatEventDatetime:
 
         result = format_event_datetime(dt, event)
 
-        assert "6:00 PM" in result
-        assert "UTC" in result
+        assert "18:00" in result
 
     def test_different_timezones_differ(self, vienna_city: City, new_york_city: City) -> None:
         dt = datetime(2026, 2, 6, 18, 0, 0, tzinfo=ZoneInfo("UTC"))
@@ -426,8 +424,8 @@ class TestFormatEventDatetime:
 
         assert result_vienna != result_ny
         # Vienna: 19:00 CET, New York: 13:00 EST
-        assert "7:00 PM" in result_vienna
-        assert "1:00 PM" in result_ny
+        assert "19:00" in result_vienna
+        assert "13:00" in result_ny
 
     def test_custom_format(self, vienna_city: City) -> None:
         event = _mock_event(vienna_city)
@@ -465,5 +463,4 @@ def test_create_ticket_pdf_uses_event_timezone(
     _, kwargs = mock_render.call_args
     start_dt = kwargs["context"]["start_datetime"]
     # 18:00 UTC = 19:00 CET
-    assert "7:00 PM" in start_dt
-    assert "CET" in start_dt
+    assert "19:00" in start_dt

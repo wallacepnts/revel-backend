@@ -15,12 +15,11 @@ from pathlib import Path
 
 from django.core.management.base import BaseCommand, CommandParser
 from django.template.loader import render_to_string
-from django.utils.dateformat import format as date_format
 
 from accounts.models import RevelUser
 from common.models import SiteSettings
 from events.models import Event, Ticket
-from events.utils import create_ticket_pdf
+from events.utils import create_ticket_pdf, format_event_datetime
 
 
 class Command(BaseCommand):
@@ -108,8 +107,8 @@ class Command(BaseCommand):
         frontend_base_url = SiteSettings.get_solo().frontend_base_url
         frontend_url = f"{frontend_base_url}/events/{event.id}"
 
-        event_start_formatted = date_format(event.start, "l, F j, Y \\a\\t g:i A T") if event.start else ""
-        event_end_formatted = date_format(event.end, "l, F j, Y \\a\\t g:i A T") if event.end else ""
+        event_start_formatted = format_event_datetime(event.start, event)
+        event_end_formatted = format_event_datetime(event.end, event)
 
         context = {
             "user": user,

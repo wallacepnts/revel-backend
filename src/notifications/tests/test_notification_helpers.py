@@ -105,7 +105,6 @@ class TestFormatEventDatetime:
 
         # Vienna is UTC+1 in winter, so 18:00 UTC = 19:00 CET
         assert "7:00 PM" in result or "19:00" in result
-        assert "CET" in result or "Central European" in result
 
     def test_returns_empty_string_for_none(self, vienna_city: City) -> None:
         """Test that empty string is returned for None datetime."""
@@ -124,7 +123,6 @@ class TestFormatEventDatetime:
         result = format_event_datetime(dt, event)
 
         assert "6:00 PM" in result or "18:00" in result
-        assert "UTC" in result
 
     def test_different_timezones_produce_different_output(self, vienna_city: City, new_york_city: City) -> None:
         """Test that different city timezones produce different formatted output."""

@@ -11,8 +11,4 @@
 
 {% if context.registration_opens_at %}
 🎫 **{% trans "Registration opens:" %}** {{ context.registration_opens_at }}
-{% else %}
-🎫 **{% trans "Registration is now open!" %}**
 {% endif %}
-
-[{% trans "View Event & Register" %}]({{ context.event_url }})

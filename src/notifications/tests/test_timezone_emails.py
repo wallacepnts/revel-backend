@@ -122,9 +122,8 @@ class TestInvitationContextTimezone:
         context = calls[0].kwargs["context"]
 
         # 18:00 UTC -> 19:00 CET, 21:00 UTC -> 22:00 CET
-        assert "7:00 PM" in context["event_start_formatted"]
-        assert "CET" in context["event_start_formatted"]
-        assert "10:00 PM" in context["event_end_formatted"]
+        assert "19:00" in context["event_start_formatted"]
+        assert "22:00" in context["event_end_formatted"]
         # The "4:00 PM to 4:00 PM" bug: start and end must not collapse to the same string.
         assert context["event_start_formatted"] != context["event_end_formatted"]
         # Templates read context.event_url (not frontend_url).
@@ -164,10 +163,9 @@ class TestFollowerContextTimezone:
         ]
         assert len(calls) == 1
         formatted = calls[0].kwargs["context"]["event_start_formatted"]
-        # Event-local (19:00 CET), never the 6:00 PM UTC wall time.
-        assert "7:00 PM" in formatted
-        assert "CET" in formatted
-        assert "6:00 PM" not in formatted
+        # Event-local (19:00 CET), never the 18:00 UTC wall time.
+        assert "19:00" in formatted
+        assert "18:00" not in formatted
 
 
 # --- Disclaimer partial ---

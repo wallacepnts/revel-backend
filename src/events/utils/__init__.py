@@ -27,8 +27,9 @@ if t.TYPE_CHECKING:
 
 logger = structlog.get_logger(__name__)
 
-# Default date format for user-facing dates: "Friday, February 6, 2026 at 7:00 PM CET"
-DEFAULT_DATE_FORMAT = "l, F j, Y \\a\\t g:i A T"
+# Default date format for user-facing dates: "Sexta-feira, 6 de fevereiro de 2026 às 19:00"
+# DuRock RJ is Portuguese-only; see RevelUser.language.
+DEFAULT_DATE_FORMAT = "l, j \\d\\e F \\d\\e Y \\à\\s H:i"
 
 
 def get_user_timezone(user: "RevelUser") -> ZoneInfo | None:
@@ -109,7 +110,7 @@ def format_event_datetime(
     Args:
         dt: Datetime to format (must be timezone-aware)
         event: Event to get timezone from
-        fmt: Date format string (default: "l, F j, Y \a\t g:i A T")
+        fmt: Date format string (default: "l, j \de F \de Y \à\s H:i")
 
     Returns:
         Formatted datetime string, or empty string if dt is None
