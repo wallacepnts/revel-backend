@@ -1179,6 +1179,9 @@ msgstr "Dieser Sektor ist voll."
 msgid "Only {available} spot(s) remaining in this sector."
 msgstr "Es sind nur noch {available} Plätze in diesem Sektor verbleibend."
 
+msgid "This tier is sold on an external platform; use its external link."
+msgstr "Diese Stufe wird auf einer externen Plattform verkauft; verwenden Sie deren externen Link."
+
 msgid "Unknown payment method."
 msgstr "Unbekannte Zahlungsmethode."
 
@@ -1475,6 +1478,9 @@ msgstr "membership_tier_id ist erforderlich, wenn grants_membership True ist."
 
 msgid "A file must be provided when resource_type is 'file'."
 msgstr "Eine Datei muss bereitgestellt werden, wenn resource_type 'file' ist."
+
+msgid "Service fee"
+msgstr "Servicegebühr"
 
 msgid "Payment processing failed. Please try again later."
 msgstr "Zahlung fehlgeschlagen. Bitte versuche es später erneut."
@@ -3461,6 +3467,14 @@ msgstr "Alle Benachrichtigungen anzeigen"
 
 msgid "View all notifications:"
 msgstr "Alle Benachrichtigungen anzeigen:"
+
+#, python-format
+msgid "%(weekday)s, %(date)s at %(time)s %(tz)s"
+msgstr "%(weekday)s, %(date)s um %(time)s %(tz)s"
+
+#, python-format
+msgid "%(date)s at %(time)s"
+msgstr "%(date)s um %(time)s"
 
 msgid "Anonymity flags are immutable after a poll is created."
 msgstr ""

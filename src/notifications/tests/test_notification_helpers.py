@@ -6,9 +6,11 @@ from zoneinfo import ZoneInfo
 
 import pytest
 from django.contrib.gis.geos import Point
+from django.utils import translation
 
 from geo.models import City
 from notifications.service.notification_helpers import format_event_datetime, get_event_timezone
+from notifications.utils import format_datetime
 
 
 @pytest.fixture
@@ -154,6 +156,57 @@ class TestFormatEventDatetime:
         # Should use custom format
         assert "2026-02-06" in result
         assert "19:00" in result
+
+
+class TestFormatDatetime:
+    """Tests for format_datetime, in particular its active-language awareness."""
+
+    def test_full_format_in_english(self) -> None:
+        """Test that the full format renders in English by default."""
+        dt = datetime(2026, 8, 16, 17, 0, 0, tzinfo=ZoneInfo("UTC"))
+
+        with translation.override("en"):
+            result = format_datetime(dt, "full")
+
+        assert "Sunday" in result
+        assert "Aug" in result
+        assert " at " in result
+
+    def test_full_format_in_portuguese(self) -> None:
+        """Test that the full format renders weekday/month names and connector word in Portuguese.
+
+        Regression test: format_datetime used to call datetime.strftime() directly, which
+        always uses the process's C locale regardless of the active Django language, so
+        notifications were always in English no matter the recipient's language preference.
+        """
+        dt = datetime(2026, 8, 16, 17, 0, 0, tzinfo=ZoneInfo("UTC"))
+
+        with translation.override("pt"):
+            result = format_datetime(dt, "full")
+
+        assert "Domingo" in result
+        assert "Agosto" in result
+        assert " às " in result
+        assert "Sunday" not in result
+        assert " at " not in result
+
+    def test_short_format_in_portuguese(self) -> None:
+        """Test that the short format is also localized."""
+        dt = datetime(2026, 8, 16, 17, 0, 0, tzinfo=ZoneInfo("UTC"))
+
+        with translation.override("pt"):
+            result = format_datetime(dt, "short")
+
+        assert " às " in result
+        assert " at " not in result
+
+    def test_parses_iso_string_input(self) -> None:
+        """Test that an ISO-format string is accepted in addition to a datetime."""
+        with translation.override("pt"):
+            result = format_datetime("2026-08-16T17:00:00+00:00", "full")
+
+        assert "2026" in result
+        assert " às " in result
 
 
 class TestGetFormattedContextForTemplate:

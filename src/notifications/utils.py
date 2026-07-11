@@ -5,7 +5,8 @@ import re
 import typing as t
 from datetime import datetime
 
-from django.utils import timezone, translation
+from django.utils import dateformat, formats, timezone, translation
+from django.utils.translation import gettext as _
 
 ChannelType = t.Literal["email", "markdown", "telegram"]
 
@@ -25,7 +26,11 @@ def format_datetime(
     dt: datetime | str,
     format_type: t.Literal["full", "short"] = "full",
 ) -> str:
-    """Format a datetime for display in notifications.
+    """Format a datetime for display in notifications, honoring the active language.
+
+    Weekday/month names and date/time ordering follow Django's active-language
+    formatting (see ``django.utils.translation.override``), so callers must invoke this
+    from within a language context for translated output.
 
     Args:
         dt: Datetime object or ISO format string
@@ -35,8 +40,9 @@ def format_datetime(
         Formatted datetime string with timezone
 
     Examples:
-        full: "Wednesday, November 14, 2025 at 6:30 PM CET"
-        short: "Nov 14, 2025 at 6:30 PM"
+        full (en): "Wednesday, November 14, 2025 at 6:30 PM CET"
+        full (pt): "Quarta-feira, 14 de Novembro de 2025 às 18:30 CET"
+        short: date and time in the locale's short form
     """
     # Parse string to datetime if needed
     if isinstance(dt, str):
@@ -46,12 +52,17 @@ def format_datetime(
     if timezone.is_naive(dt):
         dt = timezone.make_aware(dt)
 
-    # Use the datetime's timezone for formatting
+    date_part = formats.date_format(dt, "DATE_FORMAT", use_l10n=True)
+    time_part = formats.time_format(dt, use_l10n=True)
+
     if format_type == "full":
-        # Format: "Wednesday, November 14, 2025 at 6:30 PM CET"
-        return dt.strftime("%A, %B %d, %Y at %I:%M %p %Z")
-    # Format: "Nov 14, 2025 at 6:30 PM"
-    return dt.strftime("%b %d, %Y at %I:%M %p")
+        weekday = dateformat.format(dt, "l")
+        tz = dt.tzname() or ""
+        return (
+            _("%(weekday)s, %(date)s at %(time)s %(tz)s")
+            % {"weekday": weekday, "date": date_part, "time": time_part, "tz": tz}
+        ).rstrip()
+    return _("%(date)s at %(time)s") % {"date": date_part, "time": time_part}
 
 
 def format_org_signature(

@@ -326,6 +326,16 @@ makemessages:
 	# `make makemessages` deterministic (diffs only on real string changes).
 	@find src/locale -name django.po -exec sed -i.bak '/^"POT-Creation-Date:/d' {} \; -exec rm -f {}.bak \;
 
+.PHONY: makemessages-pt
+makemessages-pt:
+	# pt is DuRock RJ's primary language but is scaffolded/in-progress (see
+	# INCOMPLETE_LANGUAGES in scripts/check_translations.py), so it's kept out of the
+	# main `makemessages` target above. -e adds `md` because the notification templates
+	# under notifications/templates/notifications/{in_app,telegram}/*.md are otherwise
+	# invisible to makemessages (default extensions are html,txt,py).
+	cd src && uv run python manage.py makemessages -l pt --no-location --no-obsolete -e html,txt,py,md
+	@find src/locale/pt -name django.po -exec sed -i.bak '/^"POT-Creation-Date:/d' {} \; -exec rm -f {}.bak \;
+
 .PHONY: compilemessages
 compilemessages:
 	cd src && uv run python manage.py compilemessages

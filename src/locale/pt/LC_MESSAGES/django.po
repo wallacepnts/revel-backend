@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Impersonate"
-msgstr ""
+msgstr "Personificar"
 
 #, python-format
 msgid "Verification email sent to %d user."
@@ -45,10 +45,10 @@ msgstr[0] ""
 msgstr[1] ""
 
 msgid "Ban selected users (global ban by email)"
-msgstr ""
+msgstr "Banir usuários selecionados (banimento global por e-mail)"
 
 msgid "Violation of terms of service"
-msgstr ""
+msgstr "Violação dos termos de serviço"
 
 #, python-format
 msgid "Banned %d user."
@@ -63,19 +63,19 @@ msgstr[0] ""
 msgstr[1] ""
 
 msgid "Impersonate User"
-msgstr ""
+msgstr "Personificar usuário"
 
 msgid "Impersonation Details"
-msgstr ""
+msgstr "Detalhes da personificação"
 
 msgid "Request Information"
-msgstr ""
+msgstr "Informações da solicitação"
 
 msgid "Admin"
-msgstr ""
+msgstr "Administrador"
 
 msgid "Target User"
-msgstr ""
+msgstr "Usuário alvo"
 
 msgid "Status"
 msgstr ""
@@ -84,7 +84,7 @@ msgid "Redeemed"
 msgstr ""
 
 msgid "Pending"
-msgstr ""
+msgstr "Pendente"
 
 msgid "Your data export has been initiated."
 msgstr ""
@@ -251,7 +251,7 @@ msgid "If you didn't request this, you can safely ignore this email."
 msgstr ""
 
 msgid "Thank you,<br>The Revel Team"
-msgstr ""
+msgstr "Obrigado,<br>A equipe do Revel"
 
 msgid "Activate your account."
 msgstr ""
@@ -331,7 +331,7 @@ msgid "A user data export has failed."
 msgstr ""
 
 msgid "User:"
-msgstr ""
+msgstr "Usuário:"
 
 msgid "Error:"
 msgstr ""
@@ -363,7 +363,7 @@ msgid ""
 msgstr ""
 
 msgid "We apologize for any inconvenience."
-msgstr ""
+msgstr "Pedimos desculpas por qualquer inconveniente."
 
 msgid "Thanks,<br>The Revel Team"
 msgstr ""
@@ -593,7 +593,7 @@ msgid "Password reset request"
 msgstr ""
 
 msgid "Home"
-msgstr ""
+msgstr "Início"
 
 msgid "Accounts"
 msgstr ""
@@ -615,7 +615,7 @@ msgid "Display Name"
 msgstr ""
 
 msgid "Active"
-msgstr ""
+msgstr "Ativo"
 
 msgid "Yes"
 msgstr ""
@@ -635,7 +635,7 @@ msgid ""
 msgstr ""
 
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 msgid "Confirm Impersonation"
 msgstr ""
@@ -719,7 +719,7 @@ msgid "Please review and take appropriate action."
 msgstr ""
 
 msgid "Best regards,"
-msgstr ""
+msgstr "Atenciosamente,"
 
 msgid "Revel Security System"
 msgstr ""
@@ -742,7 +742,7 @@ msgid "If you believe this is an error, please contact support."
 msgstr ""
 
 msgid "The Revel Team"
-msgstr ""
+msgstr "A equipe do Revel"
 
 msgid "Already a member."
 msgstr ""
@@ -1042,6 +1042,9 @@ msgstr ""
 msgid "Only {available} spot(s) remaining in this sector."
 msgstr ""
 
+msgid "This tier is sold on an external platform; use its external link."
+msgstr "Este nível é vendido em uma plataforma externa; use o link externo."
+
 msgid "Unknown payment method."
 msgstr ""
 
@@ -1311,6 +1314,9 @@ msgstr ""
 msgid "A file must be provided when resource_type is 'file'."
 msgstr ""
 
+msgid "Service fee"
+msgstr "Taxa de serviço"
+
 msgid "Payment processing failed. Please try again later."
 msgstr ""
 
@@ -1553,65 +1559,65 @@ msgid "This name is not allowed."
 msgstr ""
 
 msgid "Immediate"
-msgstr ""
+msgstr "Imediato"
 
 msgid "Hourly digest"
-msgstr ""
+msgstr "Resumo por hora"
 
 msgid "Daily digest"
-msgstr ""
+msgstr "Resumo diário"
 
 msgid "Weekly digest"
-msgstr ""
+msgstr "Resumo semanal"
 
 msgid "Always display"
-msgstr ""
+msgstr "Sempre exibir"
 
 msgid "Never display"
-msgstr ""
+msgstr "Nunca exibir"
 
 msgid "Visible to other organization members"
-msgstr ""
+msgstr "Visível para outros membros da organização"
 
 msgid "Visible to other invitees at the same event"
-msgstr ""
+msgstr "Visível para outros convidados do mesmo evento"
 
 msgid "Visible to both"
-msgstr ""
+msgstr "Visível para ambos"
 
 msgid "Read more..."
-msgstr ""
+msgstr "Leia mais..."
 
 #, python-format
 msgid "%(count)d new notification%(plural)s"
-msgstr ""
+msgstr "%(count)d nova notificação%(plural)s"
 
 msgid "Account Suspended"
-msgstr ""
+msgstr "Conta suspensa"
 
 #, python-format
 msgid "%(site_name)s - Your account has been suspended"
-msgstr ""
+msgstr "%(site_name)s - Sua conta foi suspensa"
 
 #, python-format
 msgid "New Event: %(event)s"
-msgstr ""
+msgstr "Novo evento: %(event)s"
 
 #, python-format
 msgid "%(org)s has published a new event"
-msgstr ""
+msgstr "%(org)s publicou um novo evento"
 
 #, python-format
 msgid "Reminder: %(event)s is tomorrow!"
-msgstr ""
+msgstr "Lembrete: %(event)s é amanhã!"
 
 #, python-format
 msgid "Reminder: %(event)s in %(days)d days"
-msgstr ""
+msgstr "Lembrete: %(event)s em %(days)d dias"
 
 #, python-format
 msgid "Tomorrow: %(event)s"
-msgstr ""
+msgstr "Amanhã: %(event)s"
 
 #, python-format
 msgid "Event Updated: %(event)s"
@@ -1619,1159 +1625,1223 @@ msgstr "Evento atualizado: %(event)s"
 
 #, python-format
 msgid "Important Update: %(event)s"
-msgstr ""
+msgstr "Atualização importante: %(event)s"
 
 #, python-format
 msgid "Event Cancelled: %(event)s"
-msgstr ""
+msgstr "Evento cancelado: %(event)s"
 
 #, python-format
 msgid "%(follower)s started following %(org)s"
-msgstr ""
+msgstr "%(follower)s começou a seguir %(org)s"
 
 #, python-format
 msgid "New follower - %(org)s"
-msgstr ""
+msgstr "Novo seguidor - %(org)s"
 
 #, python-format
 msgid "%(follower)s started following %(series)s"
-msgstr ""
+msgstr "%(follower)s começou a seguir %(series)s"
 
 #, python-format
 msgid "New follower - %(series)s"
-msgstr ""
+msgstr "Novo seguidor - %(series)s"
 
 #, python-format
 msgid "%(org)s created %(event)s"
-msgstr ""
+msgstr "%(org)s criou %(event)s"
 
 #, python-format
 msgid "New event from %(org)s"
-msgstr ""
+msgstr "Novo evento de %(org)s"
 
 #, python-format
 msgid "New event in %(series)s: %(event)s"
-msgstr ""
+msgstr "Novo evento em %(series)s: %(event)s"
 
 #, python-format
 msgid "New event in %(series)s"
-msgstr ""
+msgstr "Novo evento em %(series)s"
 
 #, python-format
 msgid "You're invited to %(event)s"
-msgstr ""
+msgstr "Você está convidado(a) para %(event)s"
 
 #, python-format
 msgid "You're invited: %(event)s"
-msgstr ""
+msgstr "Você está convidado(a): %(event)s"
 
 #, python-format
 msgid "%(email)s requested invitation to %(event)s"
-msgstr ""
+msgstr "%(email)s solicitou convite para %(event)s"
 
 #, python-format
 msgid "New invitation request: %(event)s"
-msgstr ""
+msgstr "Nova solicitação de convite: %(event)s"
 
 #, python-format
 msgid "You're now a %(role)s of %(org)s"
-msgstr ""
+msgstr "Você agora é %(role)s de %(org)s"
 
 #, python-format
 msgid "Welcome to %(org)s"
-msgstr ""
+msgstr "Bem-vindo(a) a %(org)s"
 
 #, python-format
 msgid "You've been promoted to %(role)s in %(org)s"
-msgstr ""
+msgstr "Você foi promovido(a) a %(role)s em %(org)s"
 
 #, python-format
 msgid "Role Updated: %(role)s - %(org)s"
-msgstr ""
+msgstr "Cargo atualizado: %(role)s - %(org)s"
 
 #, python-format
 msgid "Membership Removed: %(org)s"
-msgstr ""
+msgstr "Associação removida: %(org)s"
 
 #, python-format
 msgid "Membership Request Approved: %(org)s"
-msgstr ""
+msgstr "Solicitação de associação aprovada: %(org)s"
 
 #, python-format
 msgid "Welcome to %(org)s - Request Approved"
-msgstr ""
+msgstr "Bem-vindo(a) a %(org)s - Solicitação aprovada"
 
 #, python-format
 msgid "%(user)s requested to join %(org)s"
-msgstr ""
+msgstr "%(user)s solicitou entrada em %(org)s"
 
 #, python-format
 msgid "New membership request: %(org)s"
-msgstr ""
+msgstr "Nova solicitação de associação: %(org)s"
 
 #, python-format
 msgid "Membership Request Declined: %(org)s"
-msgstr ""
+msgstr "Solicitação de associação recusada: %(org)s"
 
 #, python-format
 msgid "Membership Request Update: %(org)s"
-msgstr ""
+msgstr "Atualização da solicitação de associação: %(org)s"
 
 #, python-format
 msgid "%(org)s: %(title)s"
-msgstr ""
+msgstr "%(org)s: %(title)s"
 
 #, python-format
 msgid "%(org)s - %(title)s"
-msgstr ""
+msgstr "%(org)s - %(title)s"
 
 #, python-format
 msgid "New contact message for %(org)s from %(sender)s"
-msgstr ""
+msgstr "Nova mensagem de contato para %(org)s de %(sender)s"
 
 #, python-format
 msgid "New contact message: %(org)s"
-msgstr ""
+msgstr "Nova mensagem de contato: %(org)s"
 
 #, python-format
 msgid "%(actor)s added %(item)s"
-msgstr ""
+msgstr "%(actor)s adicionou %(item)s"
 
 #, python-format
 msgid "%(actor)s added and claimed %(item)s"
-msgstr ""
+msgstr "%(actor)s adicionou e reservou %(item)s"
 
 #, python-format
 msgid "%(actor)s claimed %(item)s"
-msgstr ""
+msgstr "%(actor)s reservou %(item)s"
 
 #, python-format
 msgid "New Potluck Item: %(item)s"
-msgstr ""
+msgstr "Novo item do prato compartilhado: %(item)s"
 
 #, python-format
 msgid "New Potluck Item Claimed: %(item)s"
-msgstr ""
+msgstr "Item do prato compartilhado reservado: %(item)s"
 
 #, python-format
 msgid "Potluck Item Claimed: %(item)s"
-msgstr ""
+msgstr "Item do prato compartilhado reservado: %(item)s"
 
 #, python-format
 msgid "Potluck Item Available: %(item)s"
-msgstr ""
+msgstr "Item do prato compartilhado disponível: %(item)s"
 
 #, python-format
 msgid "Potluck Item Removed: %(item)s"
-msgstr ""
+msgstr "Item do prato compartilhado removido: %(item)s"
 
 #, python-format
 msgid "Potluck Update: %(item)s"
-msgstr ""
+msgstr "Atualização do prato compartilhado: %(item)s"
 
 #, python-format
 msgid "%(actor)s added %(item)s - %(event)s"
-msgstr ""
+msgstr "%(actor)s adicionou %(item)s - %(event)s"
 
 #, python-format
 msgid "%(actor)s added and claimed %(item)s - %(event)s"
-msgstr ""
+msgstr "%(actor)s adicionou e reservou %(item)s - %(event)s"
 
 #, python-format
 msgid "%(actor)s claimed %(item)s - %(event)s"
-msgstr ""
+msgstr "%(actor)s reservou %(item)s - %(event)s"
 
 #, python-format
 msgid "Potluck Item Removed - %(event)s"
-msgstr ""
+msgstr "Item do prato compartilhado removido - %(event)s"
 
 #, python-format
 msgid "Potluck Update - %(event)s"
-msgstr ""
+msgstr "Atualização do prato compartilhado - %(event)s"
 
 #, python-format
 msgid "New Questionnaire Submission: %(name)s"
-msgstr ""
+msgstr "Nova submissão de questionário: %(name)s"
 
 #, python-format
 msgid "New Questionnaire Submission - %(name)s"
-msgstr ""
+msgstr "Nova submissão de questionário - %(name)s"
 
 #, python-format
 msgid "✅ Questionnaire Approved: %(name)s"
-msgstr ""
+msgstr "✅ Questionário aprovado: %(name)s"
 
 #, python-format
 msgid "❌ Questionnaire Not Approved: %(name)s"
-msgstr ""
+msgstr "❌ Questionário não aprovado: %(name)s"
 
 #, python-format
 msgid "Questionnaire Evaluation: %(name)s"
-msgstr ""
+msgstr "Avaliação do questionário: %(name)s"
 
 #, python-format
 msgid "Questionnaire Evaluation Result - %(name)s"
-msgstr ""
+msgstr "Resultado da avaliação do questionário - %(name)s"
 
 #, python-format
 msgid "RSVP Confirmed: %(event)s (%(user)s: %(response)s)"
-msgstr ""
+msgstr "RSVP confirmado: %(event)s (%(user)s: %(response)s)"
 
 #, python-format
 msgid "RSVP Confirmed: %(event)s (%(response)s)"
-msgstr ""
+msgstr "RSVP confirmado: %(event)s (%(response)s)"
 
 #, python-format
 msgid "RSVP Confirmed: %(event)s (%(user)s)"
-msgstr ""
+msgstr "RSVP confirmado: %(event)s (%(user)s)"
 
 #, python-format
 msgid "RSVP Confirmed: %(event)s"
-msgstr ""
+msgstr "RSVP confirmado: %(event)s"
 
 #, python-format
 msgid "RSVP Updated: %(event)s (%(user)s: %(response)s)"
-msgstr ""
+msgstr "RSVP atualizado: %(event)s (%(user)s: %(response)s)"
 
 #, python-format
 msgid "RSVP Updated: %(event)s (%(response)s)"
-msgstr ""
+msgstr "RSVP atualizado: %(event)s (%(response)s)"
 
 #, python-format
 msgid "RSVP Updated: %(event)s (%(user)s: %(new_response)s)"
-msgstr ""
+msgstr "RSVP atualizado: %(event)s (%(user)s: %(new_response)s)"
 
 #, python-format
 msgid "RSVP Updated: %(event)s"
-msgstr ""
+msgstr "RSVP atualizado: %(event)s"
 
 #, python-format
 msgid "RSVP Cancelled: %(event)s (%(user)s)"
-msgstr ""
+msgstr "RSVP cancelado: %(event)s (%(user)s)"
 
 #, python-format
 msgid "RSVP Cancelled: %(event)s"
-msgstr ""
+msgstr "RSVP cancelado: %(event)s"
 
 #, python-format
 msgid "%(count)d new event scheduled for %(series)s"
 msgid_plural "%(count)d new events scheduled for %(series)s"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(count)d novo evento agendado para %(series)s"
+msgstr[1] "%(count)d novos eventos agendados para %(series)s"
 
 #, python-format
 msgid "New event scheduled for %(series)s"
 msgid_plural "%(count)d new events scheduled for %(series)s"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Novo evento agendado para %(series)s"
+msgstr[1] "%(count)d novos eventos agendados para %(series)s"
 
 msgid "System Announcement"
-msgstr ""
+msgstr "Anúncio do sistema"
 
 #, python-format
 msgid "%(site_name)s - %(title)s"
-msgstr ""
+msgstr "%(site_name)s - %(title)s"
 
 #, python-format
 msgid "New Ticket: %(holder)s - %(event)s"
-msgstr ""
+msgstr "Novo ingresso: %(holder)s - %(event)s"
 
 #, python-format
 msgid "Ticket Pending for %(event)s"
-msgstr ""
+msgstr "Ingresso pendente para %(event)s"
 
 #, python-format
 msgid "Ticket Confirmed for %(event)s"
-msgstr ""
+msgstr "Ingresso confirmado para %(event)s"
 
 #, python-format
 msgid "Ticket Pending - %(event)s"
-msgstr ""
+msgstr "Ingresso pendente - %(event)s"
 
 #, python-format
 msgid "Ticket Confirmed - %(event)s"
-msgstr ""
+msgstr "Ingresso confirmado - %(event)s"
 
 #, python-format
 msgid "Ticket %(action)s: %(holder)s - %(event)s"
-msgstr ""
+msgstr "Ingresso %(action)s: %(holder)s - %(event)s"
 
 #, python-format
 msgid "Ticket Update for %(event)s"
-msgstr ""
+msgstr "Atualização de ingresso para %(event)s"
 
 #, python-format
 msgid "Ticket Update - %(event)s"
-msgstr ""
+msgstr "Atualização de ingresso - %(event)s"
 
 msgid "Payment Confirmation"
-msgstr ""
+msgstr "Confirmação de pagamento"
 
 #, python-format
 msgid "Payment Confirmation - %(event)s"
-msgstr ""
+msgstr "Confirmação de pagamento - %(event)s"
 
 #, python-format
 msgid "Checked in for %(event)s"
-msgstr ""
+msgstr "Check-in feito para %(event)s"
 
 #, python-format
 msgid "Checked in - %(event)s"
-msgstr ""
+msgstr "Check-in feito - %(event)s"
 
 #, python-format
 msgid "Spot available for %(event)s!"
-msgstr ""
+msgstr "Vaga disponível para %(event)s!"
 
 #, python-format
 msgid "%d spot available for %s!"
 msgid_plural "%d spots available for %s!"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d vaga disponível para %s!"
+msgstr[1] "%d vagas disponíveis para %s!"
 
 #, python-format
 msgid "Spot Available: %(event)s"
-msgstr ""
+msgstr "Vaga disponível: %(event)s"
 
 #, python-format
 msgid "%(user)s requested verification for %(org)s"
-msgstr ""
+msgstr "%(user)s solicitou verificação para %(org)s"
 
 #, python-format
 msgid "New verification request: %(org)s"
-msgstr ""
+msgstr "Nova solicitação de verificação: %(org)s"
 
 #, python-format
 msgid "Verification Approved: %(org)s"
-msgstr ""
+msgstr "Verificação aprovada: %(org)s"
 
 #, python-format
 msgid "Verification Approved - %(org)s"
-msgstr ""
+msgstr "Verificação aprovada - %(org)s"
 
 #, python-format
 msgid "Verification Declined: %(org)s"
-msgstr ""
+msgstr "Verificação recusada: %(org)s"
 
 #, python-format
 msgid "Verification Update: %(org)s"
-msgstr ""
+msgstr "Atualização de verificação: %(org)s"
 
 msgid "Event details have been updated."
-msgstr ""
+msgstr "Os detalhes do evento foram atualizados."
 
 #, python-format
 msgid "You're invited: %(event_name)s"
-msgstr ""
+msgstr "Você está convidado(a): %(event_name)s"
 
 msgid "Notifications"
-msgstr ""
+msgstr "Notificações"
 
 msgid "Send Announcement"
-msgstr ""
+msgstr "Enviar anúncio"
 
 msgid "Send System Announcement"
-msgstr ""
+msgstr "Enviar anúncio do sistema"
 
 msgid "Please correct the errors below."
-msgstr ""
+msgstr "Corrija os erros abaixo."
 
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 msgid "Body"
-msgstr ""
+msgstr "Mensagem"
 
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 msgid "Include guest users"
-msgstr ""
+msgstr "Incluir usuários convidados"
 
 msgid "Warning"
-msgstr ""
+msgstr "Aviso"
 
 msgid ""
 "This will send a notification to all matching active users via all enabled "
 "channels (in-app, email, Telegram). This action cannot be undone."
 msgstr ""
+"Isso enviará uma notificação a todos os usuários ativos correspondentes por "
+"todos os canais habilitados (no app, e-mail, Telegram). Esta ação não pode "
+"ser desfeita."
 
 msgid "Unsubscribe or manage notification preferences"
-msgstr ""
+msgstr "Cancelar inscrição ou gerenciar preferências de notificação"
 
 msgid "Unsubscribe or manage notification preferences:"
-msgstr ""
+msgstr "Cancelar inscrição ou gerenciar preferências de notificação:"
 
 msgid "All times are shown in the event's local timezone."
-msgstr ""
+msgstr "Todos os horários são exibidos no fuso horário local do evento."
 
 msgid "Your account has been suspended for violating our Terms of Service."
-msgstr ""
+msgstr "Sua conta foi suspensa por violar nossos Termos de Serviço."
 
 msgid "Reason"
-msgstr ""
+msgstr "Motivo"
 
 msgid "If you believe this is a mistake, please contact our support team."
 msgstr ""
+"Se você acredita que isso é um engano, entre em contato com nossa equipe de "
+"suporte."
 
 msgid "Event Cancelled"
-msgstr ""
+msgstr "Evento cancelado"
 
 msgid "Hello"
-msgstr ""
+msgstr "Olá"
 
 #, python-format
 msgid ""
 "We regret to inform you that <strong>%(event)s</strong> has been cancelled."
-msgstr ""
+msgstr "Lamentamos informar que <strong>%(event)s</strong> foi cancelado."
 
 msgid "Event Details"
-msgstr ""
+msgstr "Detalhes do evento"
 
 msgid "Refund Information"
-msgstr ""
+msgstr "Informações de reembolso"
 
 msgid "View Alternative Event"
-msgstr ""
+msgstr "Ver evento alternativo"
 
 msgid "We apologize for any inconvenience this may cause."
-msgstr ""
+msgstr "Pedimos desculpas por qualquer inconveniente."
 
 #, python-format
 msgid "We regret to inform you that %(event)s has been cancelled."
-msgstr ""
+msgstr "Lamentamos informar que %(event)s foi cancelado."
 
 msgid "Event Details:"
-msgstr ""
+msgstr "Detalhes do evento:"
 
 msgid "Reason:"
-msgstr ""
+msgstr "Motivo:"
 
 msgid "Refund Information:"
-msgstr ""
+msgstr "Informações de reembolso:"
 
 msgid "Alternative event:"
-msgstr ""
+msgstr "Evento alternativo:"
 
 msgid "New Event Published"
-msgstr ""
+msgstr "Novo evento publicado"
 
 #, python-format
 msgid ""
 "<strong>%(org)s</strong> has published a new event: <strong>%(event)s</"
 "strong>!"
 msgstr ""
+"<strong>%(org)s</strong> publicou um novo evento: <strong>%(event)s</strong>!"
 
 msgid "Until:"
-msgstr ""
+msgstr "Até:"
 
 msgid "Registration opens:"
-msgstr ""
+msgstr "Inscrições abrem em:"
 
 msgid "Registration is now open!"
-msgstr ""
+msgstr "As inscrições já estão abertas!"
 
 msgid "View Event & Register"
-msgstr ""
+msgstr "Ver evento e se inscrever"
 
 #, python-format
 msgid "%(org)s has published a new event: %(event)s!"
-msgstr ""
+msgstr "%(org)s publicou um novo evento: %(event)s!"
 
 msgid "View event details and register:"
-msgstr ""
+msgstr "Ver detalhes do evento e se inscrever:"
 
 msgid "Event Reminder"
-msgstr ""
+msgstr "Lembrete de evento"
 
 #, python-format
 msgid "Reminder: <strong>%(event)s</strong> is tomorrow!"
-msgstr ""
+msgstr "Lembrete: <strong>%(event)s</strong> é amanhã!"
 
 #, python-format
 msgid ""
 "Reminder: <strong>%(event)s</strong> is in <strong>%(days)s days</strong>"
 msgstr ""
+"Lembrete: <strong>%(event)s</strong> é em <strong>%(days)s dias</strong>"
 
 msgid "Your Ticket"
-msgstr ""
+msgstr "Seu ingresso"
 
 msgid "Ticket ID:"
-msgstr ""
+msgstr "ID do ingresso:"
 
 msgid "Tier:"
-msgstr ""
+msgstr "Nível:"
 
 msgid "View Event Details"
-msgstr ""
+msgstr "Ver detalhes do evento"
 
 msgid "See you there!"
-msgstr ""
+msgstr "Até lá!"
 
 #, python-format
 msgid "Reminder: %(event)s is in %(days)s days"
-msgstr ""
+msgstr "Lembrete: %(event)s é em %(days)s dias"
 
 msgid "Your Ticket:"
-msgstr ""
+msgstr "Seu ingresso:"
 
 msgid "View event details:"
-msgstr ""
+msgstr "Ver detalhes do evento:"
 
 msgid "New Follower"
-msgstr ""
+msgstr "Novo seguidor"
 
 #, python-format
 msgid ""
 "<strong>%(follower)s</strong> started following <strong>%(series)s</strong>."
 msgstr ""
+"<strong>%(follower)s</strong> começou a seguir <strong>%(series)s</strong>."
 
 msgid "Follower Details"
-msgstr ""
+msgstr "Detalhes do seguidor"
 
 msgid "Name:"
-msgstr ""
+msgstr "Nome:"
 
 msgid "Email:"
-msgstr ""
+msgstr "E-mail:"
 
 msgid "Series:"
-msgstr ""
+msgstr "Série:"
 
 #, python-format
 msgid "%(follower)s started following %(series)s."
-msgstr ""
+msgstr "%(follower)s começou a seguir %(series)s."
 
 msgid "Follower Details:"
-msgstr ""
+msgstr "Detalhes do seguidor:"
 
 msgid "Event Updated"
 msgstr "Evento atualizado"
 
 #, python-format
 msgid "Important update about <strong>%(event)s</strong>"
-msgstr ""
+msgstr "Atualização importante sobre <strong>%(event)s</strong>"
 
 msgid "What Changed"
-msgstr ""
+msgstr "O que mudou"
 
 msgid "Message from Organizers"
-msgstr ""
+msgstr "Mensagem dos organizadores"
 
 msgid "View Updated Event"
-msgstr ""
+msgstr "Ver evento atualizado"
 
 #, python-format
 msgid "Important update about %(event)s"
-msgstr ""
+msgstr "Atualização importante sobre %(event)s"
 
 msgid "What Changed:"
-msgstr ""
+msgstr "O que mudou:"
 
 msgid "Message from organizers:"
-msgstr ""
+msgstr "Mensagem dos organizadores:"
 
 msgid "View updated event details:"
-msgstr ""
+msgstr "Ver detalhes atualizados do evento:"
 
 msgid "View Details"
-msgstr ""
+msgstr "Ver detalhes"
 
 msgid "View details:"
-msgstr ""
+msgstr "Ver detalhes:"
 
 msgid "New Invitation Request"
-msgstr ""
+msgstr "Nova solicitação de convite"
 
 #, python-format
 msgid ""
 "<strong>%(email)s</strong> has requested an invitation to <strong>%(event)s</"
 "strong>."
 msgstr ""
+"<strong>%(email)s</strong> solicitou um convite para <strong>%(event)s</"
+"strong>."
 
 msgid "Request Details:"
-msgstr ""
+msgstr "Detalhes da solicitação:"
 
 msgid "Message:"
-msgstr ""
+msgstr "Mensagem:"
 
 msgid "View Request"
-msgstr ""
+msgstr "Ver solicitação"
 
 msgid "This is an automated notification from your event management system."
-msgstr ""
+msgstr "Esta é uma notificação automática do seu sistema de gestão de eventos."
 
 #, python-format
 msgid "%(email)s has requested an invitation to %(event)s."
-msgstr ""
+msgstr "%(email)s solicitou um convite para %(event)s."
 
 msgid "View and manage this request:"
-msgstr ""
+msgstr "Ver e gerenciar esta solicitação:"
 
 msgid "Membership Granted"
-msgstr ""
+msgstr "Associação concedida"
 
 #, python-format
 msgid "You are now a <strong>%(role)s</strong> of <strong>%(org)s</strong>!"
-msgstr ""
+msgstr "Você agora é <strong>%(role)s</strong> de <strong>%(org)s</strong>!"
 
 msgid "As a member, you can:"
-msgstr ""
+msgstr "Como membro, você pode:"
 
 msgid "Access members-only events"
-msgstr ""
+msgstr "Acessar eventos exclusivos para membros"
 
 msgid "Receive organization announcements"
-msgstr ""
+msgstr "Receber anúncios da organização"
 
 msgid "Connect with other members"
-msgstr ""
+msgstr "Conectar-se com outros membros"
 
 msgid "View Organization"
-msgstr ""
+msgstr "Ver organização"
 
 #, python-format
 msgid "You are now a %(role)s of %(org)s!"
-msgstr ""
+msgstr "Você agora é %(role)s de %(org)s!"
 
 msgid "View organization:"
-msgstr ""
+msgstr "Ver organização:"
 
 msgid "Role Updated"
-msgstr ""
+msgstr "Cargo atualizado"
 
 msgid "Please check the details of this notification."
-msgstr ""
+msgstr "Confira os detalhes desta notificação."
 
 msgid "Membership Removed"
-msgstr ""
+msgstr "Associação removida"
 
 msgid "Request Approved"
-msgstr ""
+msgstr "Solicitação aprovada"
 
 msgid "New Membership Request"
-msgstr ""
+msgstr "Nova solicitação de associação"
 
 #, python-format
 msgid ""
 "<strong>%(name)s</strong> has requested to join <strong>%(org)s</strong>."
 msgstr ""
+"<strong>%(name)s</strong> solicitou entrada em <strong>%(org)s</strong>."
 
 msgid ""
 "This is an automated notification from your organization management system."
 msgstr ""
+"Esta é uma notificação automática do seu sistema de gestão de organização."
 
 #, python-format
 msgid "%(name)s has requested to join %(org)s."
-msgstr ""
+msgstr "%(name)s solicitou entrada em %(org)s."
 
 msgid "Request Declined"
-msgstr ""
+msgstr "Solicitação recusada"
 
 msgid "New Event"
-msgstr ""
+msgstr "Novo evento"
 
 #, python-format
 msgid ""
 "<strong>%(org)s</strong> created a new event: <strong>%(event)s</strong>"
 msgstr ""
+"<strong>%(org)s</strong> criou um novo evento: <strong>%(event)s</strong>"
 
 msgid "Event:"
-msgstr ""
+msgstr "Evento:"
 
 msgid "Organization:"
-msgstr ""
+msgstr "Organização:"
 
 msgid "Date:"
-msgstr ""
+msgstr "Data:"
 
 msgid "Location:"
-msgstr ""
+msgstr "Local:"
 
 msgid "Description:"
-msgstr ""
+msgstr "Descrição:"
 
 msgid "View Event"
-msgstr ""
+msgstr "Ver evento"
 
 #, python-format
 msgid "%(org)s created a new event: %(event)s"
-msgstr ""
+msgstr "%(org)s criou um novo evento: %(event)s"
 
 msgid "View the event:"
-msgstr ""
+msgstr "Ver o evento:"
 
 msgid "New Event in Series"
-msgstr ""
+msgstr "Novo evento na série"
 
 #, python-format
 msgid "New event in <strong>%(series)s</strong>: <strong>%(event)s</strong>"
-msgstr ""
+msgstr "Novo evento em <strong>%(series)s</strong>: <strong>%(event)s</strong>"
 
 msgid "View event:"
-msgstr ""
+msgstr "Ver evento:"
 
 msgid "New Contact Message"
-msgstr ""
+msgstr "Nova mensagem de contato"
 
 #, python-format
 msgid "<strong>%(sender)s</strong> sent a message to <strong>%(org)s</strong>."
 msgstr ""
+"<strong>%(sender)s</strong> enviou uma mensagem para <strong>%(org)s</"
+"strong>."
 
 msgid "Subject:"
-msgstr ""
+msgstr "Assunto:"
 
 msgid "View Message"
-msgstr ""
+msgstr "Ver mensagem"
 
 #, python-format
 msgid "%(sender)s sent a message to %(org)s."
-msgstr ""
+msgstr "%(sender)s enviou uma mensagem para %(org)s."
 
 msgid "View this message:"
-msgstr ""
+msgstr "Ver esta mensagem:"
 
 #, python-format
 msgid ""
 "<strong>%(follower)s</strong> started following <strong>%(org)s</strong>."
 msgstr ""
+"<strong>%(follower)s</strong> começou a seguir <strong>%(org)s</strong>."
 
 #, python-format
 msgid "%(follower)s started following %(org)s."
-msgstr ""
+msgstr "%(follower)s começou a seguir %(org)s."
 
 msgid "Payment Confirmed"
-msgstr ""
+msgstr "Pagamento confirmado"
 
 #, python-format
 msgid ""
 "Thank you! Your payment for <strong>%(event)s</strong> has been confirmed. 🎉"
 msgstr ""
+"Obrigado! Seu pagamento para <strong>%(event)s</strong> foi confirmado. 🎉"
 
 msgid "Payment Details"
-msgstr ""
+msgstr "Detalhes do pagamento"
 
 msgid "Amount:"
-msgstr ""
+msgstr "Valor:"
 
 msgid "Payment ID:"
-msgstr ""
+msgstr "ID do pagamento:"
 
 msgid "Ticket Information"
-msgstr ""
+msgstr "Informações do ingresso"
 
 msgid "Status:"
-msgstr ""
+msgstr "Status:"
 
 msgid ""
 "Your ticket is now active and attached to this email. Present it at the "
 "event entrance."
 msgstr ""
+"Seu ingresso já está ativo e anexado a este e-mail. Apresente-o na entrada "
+"do evento."
 
 #, python-format
 msgid "Thank you! Your payment for %(event)s has been confirmed. 🎉"
-msgstr ""
+msgstr "Obrigado! Seu pagamento para %(event)s foi confirmado. 🎉"
 
 msgid "Payment Details:"
-msgstr ""
+msgstr "Detalhes do pagamento:"
 
 msgid "Ticket Information:"
-msgstr ""
+msgstr "Informações do ingresso:"
 
 msgid "Sign up to accept this invitation and join the event:"
-msgstr ""
+msgstr "Cadastre-se para aceitar este convite e participar do evento:"
 
 msgid "Sign Up & Accept"
-msgstr ""
+msgstr "Cadastrar e aceitar"
 
 msgid "You received this email because you were invited to an event on Revel."
 msgstr ""
+"Você recebeu este e-mail porque foi convidado(a) para um evento no Revel."
 
 msgid "Sign up to accept this invitation:"
-msgstr ""
+msgstr "Cadastre-se para aceitar este convite:"
 
 msgid "Claimed"
-msgstr ""
+msgstr "Reservado"
 
 #, python-format
 msgid ""
 "<strong>%(actor)s</strong> claimed <strong>\"%(item)s\"</strong> for "
 "<strong>%(event)s</strong>."
 msgstr ""
+"<strong>%(actor)s</strong> reservou <strong>\"%(item)s\"</strong> para "
+"<strong>%(event)s</strong>."
 
 #, python-format
 msgid ""
 "<strong>\"%(item)s\"</strong> has been claimed for <strong>%(event)s</"
 "strong>."
 msgstr ""
+"<strong>\"%(item)s\"</strong> foi reservado para <strong>%(event)s</strong>."
 
 msgid "Item Details"
-msgstr ""
+msgstr "Detalhes do item"
 
 msgid "Item:"
-msgstr ""
+msgstr "Item:"
 
 msgid "Category:"
-msgstr ""
+msgstr "Categoria:"
 
 msgid "Quantity:"
-msgstr ""
+msgstr "Quantidade:"
 
 msgid "Claimed by:"
-msgstr ""
+msgstr "Reservado por:"
 
 msgid "View Potluck List"
-msgstr ""
+msgstr "Ver lista de pratos"
 
 #, python-format
 msgid "%(actor)s claimed \"%(item)s\" for %(event)s."
-msgstr ""
+msgstr "%(actor)s reservou \"%(item)s\" para %(event)s."
 
 #, python-format
 msgid "\"%(item)s\" has been claimed for %(event)s."
-msgstr ""
+msgstr "\"%(item)s\" foi reservado para %(event)s."
 
 msgid "Item Details:"
-msgstr ""
+msgstr "Detalhes do item:"
 
 msgid "View potluck list:"
-msgstr ""
+msgstr "Ver lista de pratos:"
 
 msgid "New Potluck Item"
-msgstr ""
+msgstr "Novo item do prato compartilhado"
 
 #, python-format
 msgid ""
 "<strong>%(actor)s</strong> added <strong>\"%(item)s\"</strong> to the "
 "potluck for <strong>%(event)s</strong>."
 msgstr ""
+"<strong>%(actor)s</strong> adicionou <strong>\"%(item)s\"</strong> ao prato "
+"compartilhado de <strong>%(event)s</strong>."
 
 #, python-format
 msgid ""
 "A new potluck item <strong>\"%(item)s\"</strong> has been added to "
 "<strong>%(event)s</strong>."
 msgstr ""
+"Um novo item do prato compartilhado <strong>\"%(item)s\"</strong> foi "
+"adicionado a <strong>%(event)s</strong>."
 
 msgid "Added by:"
-msgstr ""
+msgstr "Adicionado por:"
 
 msgid "Claim Item"
-msgstr ""
+msgstr "Reservar item"
 
 #, python-format
 msgid "%(actor)s added \"%(item)s\" to the potluck for %(event)s."
-msgstr ""
+msgstr "%(actor)s adicionou \"%(item)s\" ao prato compartilhado de %(event)s."
 
 #, python-format
 msgid "A new potluck item \"%(item)s\" has been added to %(event)s."
 msgstr ""
+"Um novo item do prato compartilhado \"%(item)s\" foi adicionado a %(event)s."
 
 msgid "Claim this item or view the potluck list:"
-msgstr ""
+msgstr "Reserve este item ou veja a lista de pratos:"
 
 msgid "New Item Added & Claimed"
-msgstr ""
+msgstr "Novo item adicionado e reservado"
 
 #, python-format
 msgid ""
 "<strong>%(actor)s</strong> added and claimed <strong>\"%(item)s\"</strong> "
 "for <strong>%(event)s</strong>."
 msgstr ""
+"<strong>%(actor)s</strong> adicionou e reservou <strong>\"%(item)s\"</"
+"strong> para <strong>%(event)s</strong>."
 
 #, python-format
 msgid ""
 "A new potluck item <strong>\"%(item)s\"</strong> has been added and claimed "
 "for <strong>%(event)s</strong>."
 msgstr ""
+"Um novo item do prato compartilhado <strong>\"%(item)s\"</strong> foi "
+"adicionado e reservado para <strong>%(event)s</strong>."
 
 msgid "Added and claimed by:"
-msgstr ""
+msgstr "Adicionado e reservado por:"
 
 #, python-format
 msgid "%(actor)s added and claimed \"%(item)s\" for %(event)s."
-msgstr ""
+msgstr "%(actor)s adicionou e reservou \"%(item)s\" para %(event)s."
 
 #, python-format
 msgid ""
 "A new potluck item \"%(item)s\" has been added and claimed for %(event)s."
 msgstr ""
+"Um novo item do prato compartilhado \"%(item)s\" foi adicionado e reservado "
+"para %(event)s."
 
 msgid "Removed"
-msgstr ""
+msgstr "Removido"
 
 #, python-format
 msgid ""
 "<strong>\"%(item)s\"</strong> has been removed from the potluck for "
 "<strong>%(event)s</strong>."
 msgstr ""
+"<strong>\"%(item)s\"</strong> foi removido do prato compartilhado de "
+"<strong>%(event)s</strong>."
 
 #, python-format
 msgid "\"%(item)s\" has been removed from the potluck for %(event)s."
-msgstr ""
+msgstr "\"%(item)s\" foi removido do prato compartilhado de %(event)s."
 
 msgid "Available"
-msgstr ""
+msgstr "Disponível"
 
 #, python-format
 msgid ""
 "<strong>\"%(item)s\"</strong> is now available for <strong>%(event)s</"
 "strong>."
 msgstr ""
+"<strong>\"%(item)s\"</strong> já está disponível para <strong>%(event)s</"
+"strong>."
 
 #, python-format
 msgid "\"%(item)s\" is now available for %(event)s."
-msgstr ""
+msgstr "\"%(item)s\" já está disponível para %(event)s."
 
 msgid "Claim this item:"
-msgstr ""
+msgstr "Reserve este item:"
 
 msgid "Updated"
-msgstr ""
+msgstr "Atualizado"
 
 #, python-format
 msgid ""
 "<strong>\"%(item)s\"</strong> has been updated for <strong>%(event)s</"
 "strong>."
 msgstr ""
+"<strong>\"%(item)s\"</strong> foi atualizado para <strong>%(event)s</strong>."
 
 #, python-format
 msgid "\"%(item)s\" has been updated for %(event)s."
-msgstr ""
+msgstr "\"%(item)s\" foi atualizado para %(event)s."
 
 msgid "Questionnaire Approved"
-msgstr ""
+msgstr "Questionário aprovado"
 
 msgid "Questionnaire Not Approved"
-msgstr ""
+msgstr "Questionário não aprovado"
 
 #, python-format
 msgid ""
 "Great news! Your questionnaire <strong>%(questionnaire)s</strong> for "
 "<strong>%(event)s</strong> has been approved."
 msgstr ""
+"Ótima notícia! Seu questionário <strong>%(questionnaire)s</strong> para "
+"<strong>%(event)s</strong> foi aprovado."
 
 #, python-format
 msgid ""
 "Great news! Your questionnaire <strong>%(questionnaire)s</strong> for "
 "<strong>%(org)s</strong> has been approved."
 msgstr ""
+"Ótima notícia! Seu questionário <strong>%(questionnaire)s</strong> para "
+"<strong>%(org)s</strong> foi aprovado."
 
 #, python-format
 msgid ""
 "Your questionnaire <strong>%(questionnaire)s</strong> for <strong>%(event)s</"
 "strong> was not approved."
 msgstr ""
+"Seu questionário <strong>%(questionnaire)s</strong> para <strong>%(event)s</"
+"strong> não foi aprovado."
 
 #, python-format
 msgid ""
 "Your questionnaire <strong>%(questionnaire)s</strong> for <strong>%(org)s</"
 "strong> was not approved."
 msgstr ""
+"Seu questionário <strong>%(questionnaire)s</strong> para <strong>%(org)s</"
+"strong> não foi aprovado."
 
 msgid "Questionnaire:"
-msgstr ""
+msgstr "Questionário:"
 
 msgid "Approved"
-msgstr ""
+msgstr "Aprovado"
 
 msgid "Not Approved"
-msgstr ""
+msgstr "Não aprovado"
 
 msgid "Score:"
-msgstr ""
+msgstr "Nota:"
 
 msgid "Evaluator Comments:"
-msgstr ""
+msgstr "Comentários do avaliador:"
 
 msgid "Important:"
-msgstr ""
+msgstr "Importante:"
 
 msgid ""
 "Approval does not mean you are registered. Please secure your ticket to "
 "confirm your attendance."
 msgstr ""
+"A aprovação não significa que você está inscrito(a). Garanta seu ingresso "
+"para confirmar sua participação."
 
 msgid ""
 "Approval does not mean you are registered. Please RSVP to confirm your "
 "attendance."
 msgstr ""
+"A aprovação não significa que você está inscrito(a). Confirme presença "
+"(RSVP) para garantir sua participação."
 
 msgid "Get Ticket"
-msgstr ""
+msgstr "Obter ingresso"
 
 msgid "RSVP Now"
-msgstr ""
+msgstr "Confirmar presença"
 
 #, python-format
 msgid "Your questionnaire %(questionnaire)s for %(event)s has been approved!"
-msgstr ""
+msgstr "Seu questionário %(questionnaire)s para %(event)s foi aprovado!"
 
 #, python-format
 msgid "Your questionnaire %(questionnaire)s has been approved!"
-msgstr ""
+msgstr "Seu questionário %(questionnaire)s foi aprovado!"
 
 #, python-format
 msgid "Your questionnaire %(questionnaire)s for %(event)s was not approved."
-msgstr ""
+msgstr "Seu questionário %(questionnaire)s para %(event)s não foi aprovado."
 
 #, python-format
 msgid "Your questionnaire %(questionnaire)s was not approved."
-msgstr ""
+msgstr "Seu questionário %(questionnaire)s não foi aprovado."
 
 msgid "Details:"
-msgstr ""
+msgstr "Detalhes:"
 
 msgid "Get ticket:"
-msgstr ""
+msgstr "Obter ingresso:"
 
 msgid "RSVP now:"
-msgstr ""
+msgstr "Confirme presença agora:"
 
 msgid "New Questionnaire Submission"
-msgstr ""
+msgstr "Nova submissão de questionário"
 
 #, python-format
 msgid ""
 "<strong>%(name)s</strong> has submitted the questionnaire "
 "<strong>%(questionnaire)s</strong>."
 msgstr ""
+"<strong>%(name)s</strong> enviou o questionário <strong>%(questionnaire)s</"
+"strong>."
 
 msgid "Submitted by:"
-msgstr ""
+msgstr "Enviado por:"
 
 msgid "For Event:"
-msgstr ""
+msgstr "Para o evento:"
 
 msgid "Review Submission"
-msgstr ""
+msgstr "Analisar submissão"
 
 #, python-format
 msgid "%(name)s has submitted the questionnaire %(questionnaire)s."
-msgstr ""
+msgstr "%(name)s enviou o questionário %(questionnaire)s."
 
 msgid "Submission Details:"
-msgstr ""
+msgstr "Detalhes da submissão:"
 
 msgid "Review the submission:"
-msgstr ""
+msgstr "Analise a submissão:"
 
 msgid "RSVP Cancelled"
-msgstr ""
+msgstr "RSVP cancelado"
 
 #, python-format
 msgid ""
 "<strong>%(user)s</strong> has cancelled their RSVP for <strong>%(event)s</"
 "strong>."
 msgstr ""
+"<strong>%(user)s</strong> cancelou o RSVP para <strong>%(event)s</strong>."
 
 msgid "Cancellation Details"
-msgstr ""
+msgstr "Detalhes do cancelamento"
 
 #, python-format
 msgid "Your RSVP for <strong>%(event)s</strong> has been cancelled."
-msgstr ""
+msgstr "Seu RSVP para <strong>%(event)s</strong> foi cancelado."
 
 msgid "You can RSVP again anytime if you change your mind."
 msgstr ""
+"Você pode confirmar presença novamente a qualquer momento, caso mude de "
+"ideia."
 
 #, python-format
 msgid "%(user)s has cancelled their RSVP for %(event)s."
-msgstr ""
+msgstr "%(user)s cancelou o RSVP para %(event)s."
 
 msgid "Cancellation Details:"
-msgstr ""
+msgstr "Detalhes do cancelamento:"
 
 #, python-format
 msgid "Your RSVP for %(event)s has been cancelled."
-msgstr ""
+msgstr "Seu RSVP para %(event)s foi cancelado."
 
 msgid "RSVP Confirmed"
-msgstr ""
+msgstr "RSVP confirmado"
 
 #, python-format
 msgid ""
 "<strong>%(user)s</strong> has RSVP'd <strong>%(response)s</strong> for "
 "<strong>%(event)s</strong>."
 msgstr ""
+"<strong>%(user)s</strong> confirmou presença (<strong>%(response)s</strong>) "
+"em <strong>%(event)s</strong>."
 
 msgid "RSVP Details"
-msgstr ""
+msgstr "Detalhes do RSVP"
 
 msgid "Response:"
-msgstr ""
+msgstr "Resposta:"
 
 #, python-format
 msgid ""
 "Your RSVP (<strong>%(response)s</strong>) for <strong>%(event)s</strong> has "
 "been confirmed! ✅"
 msgstr ""
+"Seu RSVP (<strong>%(response)s</strong>) para <strong>%(event)s</strong> foi "
+"confirmado! ✅"
 
 msgid "Your Response"
-msgstr ""
+msgstr "Sua resposta"
 
 msgid "Guests:"
-msgstr ""
+msgstr "Acompanhantes:"
 
 msgid "Dietary restrictions:"
-msgstr ""
+msgstr "Restrições alimentares:"
 
 #, python-format
 msgid "%(user)s has RSVP'd %(response)s for %(event)s."
-msgstr ""
+msgstr "%(user)s confirmou presença (%(response)s) em %(event)s."
 
 msgid "RSVP Details:"
-msgstr ""
+msgstr "Detalhes do RSVP:"
 
 #, python-format
 msgid "Your RSVP (%(response)s) for %(event)s has been confirmed! ✅"
-msgstr ""
+msgstr "Seu RSVP (%(response)s) para %(event)s foi confirmado! ✅"
 
 msgid "Your Response:"
-msgstr ""
+msgstr "Sua resposta:"
 
 msgid "RSVP Updated"
-msgstr ""
+msgstr "RSVP atualizado"
 
 #, python-format
 msgid ""
 "<strong>%(user)s</strong> has changed their RSVP from <strong>%(old)s</"
 "strong> to <strong>%(new)s</strong> for <strong>%(event)s</strong>."
 msgstr ""
+"<strong>%(user)s</strong> mudou o RSVP de <strong>%(old)s</strong> para "
+"<strong>%(new)s</strong> em <strong>%(event)s</strong>."
 
 msgid "Updated RSVP Details"
-msgstr ""
+msgstr "Detalhes atualizados do RSVP"
 
 msgid "Previous Response:"
-msgstr ""
+msgstr "Resposta anterior:"
 
 msgid "New Response:"
-msgstr ""
+msgstr "Nova resposta:"
 
 #, python-format
 msgid ""
 "Your RSVP for <strong>%(event)s</strong> has been updated from "
 "<strong>%(old)s</strong> to <strong>%(new)s</strong>."
 msgstr ""
+"Seu RSVP para <strong>%(event)s</strong> foi atualizado de <strong>%(old)s</"
+"strong> para <strong>%(new)s</strong>."
 
 msgid "Updated Response"
-msgstr ""
+msgstr "Resposta atualizada"
 
 #, python-format
 msgid "%(user)s has changed their RSVP from %(old)s to %(new)s for %(event)s."
-msgstr ""
+msgstr "%(user)s mudou o RSVP de %(old)s para %(new)s em %(event)s."
 
 msgid "Updated RSVP Details:"
-msgstr ""
+msgstr "Detalhes atualizados do RSVP:"
 
 #, python-format
 msgid "Your RSVP for %(event)s has been updated from %(old)s to %(new)s."
-msgstr ""
+msgstr "Seu RSVP para %(event)s foi atualizado de %(old)s para %(new)s."
 
 msgid "Updated Response:"
-msgstr ""
+msgstr "Resposta atualizada:"
 
 msgid "New Events Scheduled"
-msgstr ""
+msgstr "Novos eventos agendados"
 
 #, python-format
 msgid ""
@@ -2781,354 +2851,930 @@ msgid_plural ""
 "<strong>%(counter)s</strong> new events have been scheduled for "
 "<strong>%(series)s</strong>."
 msgstr[0] ""
+"<strong>%(counter)s</strong> novo evento foi agendado para "
+"<strong>%(series)s</strong>."
 msgstr[1] ""
+"<strong>%(counter)s</strong> novos eventos foram agendados para "
+"<strong>%(series)s</strong>."
 
 msgid "Events scheduled:"
-msgstr ""
+msgstr "Eventos agendados:"
 
 msgid "View Series"
-msgstr ""
+msgstr "Ver série"
 
 #, python-format
 msgid "%(counter)s new event has been scheduled for %(series)s."
 msgid_plural "%(counter)s new events have been scheduled for %(series)s."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(counter)s novo evento foi agendado para %(series)s."
+msgstr[1] "%(counter)s novos eventos foram agendados para %(series)s."
 
 msgid "View the series:"
-msgstr ""
+msgstr "Ver a série:"
 
 msgid "Read More"
-msgstr ""
+msgstr "Leia mais"
 
 msgid "Read more:"
-msgstr ""
+msgstr "Leia mais:"
 
 msgid "Ticket Cancelled"
-msgstr ""
+msgstr "Ingresso cancelado"
 
 #, python-format
 msgid ""
 "<strong>%(holder)s</strong> cancelled their ticket for <strong>%(event)s</"
 "strong>."
 msgstr ""
+"<strong>%(holder)s</strong> cancelou o ingresso para <strong>%(event)s</"
+"strong>."
 
 #, python-format
 msgid ""
 "<strong>%(holder)s</strong>'s ticket for <strong>%(event)s</strong> was "
 "refunded via the Stripe dashboard."
 msgstr ""
+"O ingresso de <strong>%(holder)s</strong> para <strong>%(event)s</strong> "
+"foi reembolsado pelo painel do Stripe."
 
 #, python-format
 msgid ""
 "<strong>%(holder)s</strong>'s ticket for <strong>%(event)s</strong> has been "
 "cancelled."
 msgstr ""
+"O ingresso de <strong>%(holder)s</strong> para <strong>%(event)s</strong> "
+"foi cancelado."
 
 #, python-format
 msgid "You cancelled your ticket for <strong>%(event)s</strong>."
-msgstr ""
+msgstr "Você cancelou seu ingresso para <strong>%(event)s</strong>."
 
 #, python-format
 msgid ""
 "Your ticket for <strong>%(event)s</strong> has been cancelled and refunded."
 msgstr ""
+"Seu ingresso para <strong>%(event)s</strong> foi cancelado e reembolsado."
 
 #, python-format
 msgid "Your ticket for <strong>%(event)s</strong> has been cancelled."
-msgstr ""
+msgstr "Seu ingresso para <strong>%(event)s</strong> foi cancelado."
 
 msgid "Ticket Holder"
-msgstr ""
+msgstr "Titular do ingresso"
 
 msgid "Cancelled Ticket"
-msgstr ""
+msgstr "Ingresso cancelado"
 
 #, python-format
 msgid ""
 "A refund of <strong>%(amount)s %(currency)s</strong> has been issued to the "
 "ticket holder."
 msgstr ""
+"Um reembolso de <strong>%(amount)s %(currency)s</strong> foi emitido para o "
+"titular do ingresso."
 
 #, python-format
 msgid ""
 "A refund of <strong>%(amount)s %(currency)s</strong> will be processed to "
 "your original payment method within 5-10 business days."
 msgstr ""
+"Um reembolso de <strong>%(amount)s %(currency)s</strong> será processado no "
+"seu método de pagamento original em 5 a 10 dias úteis."
 
 #, python-format
 msgid "%(holder)s cancelled their ticket for %(event)s."
-msgstr ""
+msgstr "%(holder)s cancelou o ingresso para %(event)s."
 
 #, python-format
 msgid ""
 "%(holder)s's ticket for %(event)s was refunded via the Stripe dashboard."
 msgstr ""
+"O ingresso de %(holder)s para %(event)s foi reembolsado pelo painel do "
+"Stripe."
 
 #, python-format
 msgid "%(holder)s's ticket for %(event)s has been cancelled."
-msgstr ""
+msgstr "O ingresso de %(holder)s para %(event)s foi cancelado."
 
 msgid "Ticket Holder:"
-msgstr ""
+msgstr "Titular do ingresso:"
 
 #, python-format
 msgid "You cancelled your ticket for %(event)s."
-msgstr ""
+msgstr "Você cancelou seu ingresso para %(event)s."
 
 #, python-format
 msgid "Your ticket for %(event)s has been cancelled and refunded."
-msgstr ""
+msgstr "Seu ingresso para %(event)s foi cancelado e reembolsado."
 
 #, python-format
 msgid "Your ticket for %(event)s has been cancelled."
-msgstr ""
+msgstr "Seu ingresso para %(event)s foi cancelado."
 
 msgid "Cancelled Ticket:"
-msgstr ""
+msgstr "Ingresso cancelado:"
 
 #, python-format
 msgid ""
 "A refund of %(amount)s %(currency)s has been issued to the ticket holder."
 msgstr ""
+"Um reembolso de %(amount)s %(currency)s foi emitido para o titular do "
+"ingresso."
 
 #, python-format
 msgid ""
 "A refund of %(amount)s %(currency)s will be processed to your original "
 "payment method within 5-10 business days."
 msgstr ""
+"Um reembolso de %(amount)s %(currency)s será processado no seu método de "
+"pagamento original em 5 a 10 dias úteis."
 
 msgid "Checked In!"
-msgstr ""
+msgstr "Check-in feito!"
 
 #, python-format
 msgid "You have been checked in for <strong>%(event)s</strong>!"
-msgstr ""
+msgstr "Seu check-in foi feito para <strong>%(event)s</strong>!"
 
 msgid "Enjoy the event!"
-msgstr ""
+msgstr "Aproveite o evento!"
 
 #, python-format
 msgid "You have been checked in for %(event)s!"
-msgstr ""
+msgstr "Seu check-in foi feito para %(event)s!"
 
 msgid "New Ticket Registered"
-msgstr ""
+msgstr "Novo ingresso registrado"
 
 msgid "Ticket Confirmed"
-msgstr ""
+msgstr "Ingresso confirmado"
 
 #, python-format
 msgid ""
 "<strong>%(holder)s</strong> has registered for <strong>%(event)s</strong>."
 msgstr ""
+"<strong>%(holder)s</strong> se inscreveu em <strong>%(event)s</strong>."
 
 msgid "Ticket Details"
-msgstr ""
+msgstr "Detalhes do ingresso"
 
 msgid "Holder:"
-msgstr ""
+msgstr "Titular:"
 
 #, python-format
 msgid ""
 "Your ticket for <strong>%(event)s</strong> is pending payment confirmation."
 msgstr ""
+"Seu ingresso para <strong>%(event)s</strong> está aguardando confirmação de "
+"pagamento."
 
 msgid "Payment Instructions"
-msgstr ""
+msgstr "Instruções de pagamento"
 
 msgid "Please contact the organizer to complete the payment."
-msgstr ""
+msgstr "Entre em contato com o organizador para concluir o pagamento."
 
 #, python-format
 msgid "Your ticket for <strong>%(event)s</strong> is confirmed! 🎉"
-msgstr ""
+msgstr "Seu ingresso para <strong>%(event)s</strong> está confirmado! 🎉"
 
 #, python-format
 msgid "%(holder)s has registered for %(event)s."
-msgstr ""
+msgstr "%(holder)s se inscreveu em %(event)s."
 
 msgid "Ticket Details:"
-msgstr ""
+msgstr "Detalhes do ingresso:"
 
 #, python-format
 msgid "Your ticket for %(event)s is pending payment confirmation."
-msgstr ""
+msgstr "Seu ingresso para %(event)s está aguardando confirmação de pagamento."
 
 msgid "Payment Instructions:"
-msgstr ""
+msgstr "Instruções de pagamento:"
 
 #, python-format
 msgid "Your ticket for %(event)s is confirmed! 🎉"
-msgstr ""
+msgstr "Seu ingresso para %(event)s está confirmado! 🎉"
 
 msgid "Refund Processed"
-msgstr ""
+msgstr "Reembolso processado"
 
 #, python-format
 msgid "Your ticket refund for <strong>%(event)s</strong> has been processed."
 msgstr ""
+"O reembolso do seu ingresso para <strong>%(event)s</strong> foi processado."
 
 msgid ""
 "The refund will appear in your original payment method within <strong>5-10 "
 "business days</strong>, depending on your bank or card issuer."
 msgstr ""
+"O reembolso aparecerá no seu método de pagamento original em <strong>5 a 10 "
+"dias úteis</strong>, dependendo do seu banco ou emissor do cartão."
 
 #, python-format
 msgid "Your ticket refund for %(event)s has been processed."
-msgstr ""
+msgstr "O reembolso do seu ingresso para %(event)s foi processado."
 
 msgid ""
 "The refund will appear in your original payment method within 5-10 business "
 "days, depending on your bank or card issuer."
 msgstr ""
+"O reembolso aparecerá no seu método de pagamento original em 5 a 10 dias "
+"úteis, dependendo do seu banco ou emissor do cartão."
 
 msgid "Ticket Updated"
-msgstr ""
+msgstr "Ingresso atualizado"
 
 #, python-format
 msgid ""
 "<strong>%(holder)s</strong>'s ticket for <strong>%(event)s</strong> has been "
 "<strong>%(action)s</strong>."
 msgstr ""
+"O ingresso de <strong>%(holder)s</strong> para <strong>%(event)s</strong> "
+"foi <strong>%(action)s</strong>."
 
 #, python-format
 msgid ""
 "Your ticket for <strong>%(event)s</strong> has been <strong>%(action)s</"
 "strong>."
 msgstr ""
+"Seu ingresso para <strong>%(event)s</strong> foi <strong>%(action)s</strong>."
 
 msgid "Updated Ticket Information"
-msgstr ""
+msgstr "Informações atualizadas do ingresso"
 
 #, python-format
 msgid "%(holder)s's ticket for %(event)s has been %(action)s."
-msgstr ""
+msgstr "O ingresso de %(holder)s para %(event)s foi %(action)s."
 
 #, python-format
 msgid "Your ticket for %(event)s has been confirmed! 🎉"
-msgstr ""
+msgstr "Seu ingresso para %(event)s foi confirmado! 🎉"
 
 msgid "Your payment has been confirmed. Your ticket is now active!"
-msgstr ""
+msgstr "Seu pagamento foi confirmado. Seu ingresso já está ativo!"
 
 #, python-format
 msgid "Your ticket for %(event)s has been updated."
-msgstr ""
+msgstr "Seu ingresso para %(event)s foi atualizado."
 
 msgid "Updated Ticket Information:"
-msgstr ""
+msgstr "Informações atualizadas do ingresso:"
 
 msgid "Spot Available!"
-msgstr ""
+msgstr "Vaga disponível!"
 
 #, python-format
 msgid "A spot just opened up for <strong>%(event)s</strong>!"
-msgstr ""
+msgstr "Acabou de abrir uma vaga para <strong>%(event)s</strong>!"
 
 msgid "This is the final call — the waitlist has opened to everyone."
-msgstr ""
+msgstr "Esta é a última chamada — a lista de espera foi aberta para todos."
 
 msgid "You've been selected from the waitlist."
-msgstr ""
+msgstr "Você foi selecionado(a) da lista de espera."
 
 msgid "Claim your spot before"
-msgstr ""
+msgstr "Garanta sua vaga até"
 
 msgid "Claim Your Spot"
-msgstr ""
+msgstr "Garanta sua vaga"
 
 msgid "You're receiving this because you're on the waitlist for this event."
-msgstr ""
+msgstr "Você está recebendo isto porque está na lista de espera deste evento."
 
 msgid "A spot just opened up for"
-msgstr ""
+msgstr "Acabou de abrir uma vaga para"
 
 msgid "Claim your spot:"
-msgstr ""
+msgstr "Garanta sua vaga:"
 
 msgid "Verification Approved"
-msgstr ""
+msgstr "Verificação aprovada"
 
 #, python-format
 msgid ""
 "Your verification request for <strong>%(org)s</strong> has been approved. "
 "You now have full access to view and participate in their events."
 msgstr ""
+"Sua solicitação de verificação para <strong>%(org)s</strong> foi aprovada. "
+"Agora você tem acesso completo para ver e participar dos eventos da "
+"organização."
 
 #, python-format
 msgid ""
 "Your verification request for %(org)s has been approved. You now have full "
 "access to view and participate in their events."
 msgstr ""
+"Sua solicitação de verificação para %(org)s foi aprovada. Agora você tem "
+"acesso completo para ver e participar dos eventos da organização."
 
 msgid "New Verification Request"
-msgstr ""
+msgstr "Nova solicitação de verificação"
 
 #, python-format
 msgid ""
 "<strong>%(name)s</strong> has requested verification for <strong>%(org)s</"
 "strong>."
 msgstr ""
+"<strong>%(name)s</strong> solicitou verificação para <strong>%(org)s</"
+"strong>."
 
 msgid "Matched Entries:"
-msgstr ""
+msgstr "Correspondências encontradas:"
 
 msgid "Review Request"
-msgstr ""
+msgstr "Analisar solicitação"
 
 msgid ""
 "This user matched entries in your blacklist and is requesting verification "
 "to access your organization."
 msgstr ""
+"Este usuário corresponde a entradas na sua lista de bloqueio e está "
+"solicitando verificação para acessar sua organização."
 
 #, python-format
 msgid "%(name)s has requested verification for %(org)s."
-msgstr ""
+msgstr "%(name)s solicitou verificação para %(org)s."
 
 msgid "Review this request:"
-msgstr ""
+msgstr "Analise esta solicitação:"
 
 msgid "Verification Update"
-msgstr ""
+msgstr "Atualização de verificação"
 
 #, python-format
 msgid ""
 "Your verification request for <strong>%(org)s</strong> was not approved at "
 "this time."
 msgstr ""
+"Sua solicitação de verificação para <strong>%(org)s</strong> não foi "
+"aprovada no momento."
 
 msgid ""
 "If you believe this is an error, please contact the organization directly."
 msgstr ""
+"Se você acredita que isso é um erro, entre em contato diretamente com a "
+"organização."
 
 #, python-format
 msgid "Your verification request for %(org)s was not approved at this time."
 msgstr ""
+"Sua solicitação de verificação para %(org)s não foi aprovada no momento."
 
 msgid "Your Notification Digest"
-msgstr ""
+msgstr "Seu resumo de notificações"
 
 #, python-format
 msgid "%(counter)s new notification"
 msgid_plural "%(counter)s new notifications"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%(counter)s nova notificação"
+msgstr[1] "%(counter)s novas notificações"
 
 msgid "Hi"
-msgstr ""
+msgstr "Oi"
 
 msgid "Here's what you missed since your last digest:"
-msgstr ""
+msgstr "Veja o que você perdeu desde o seu último resumo:"
 
 msgid "View details →"
-msgstr ""
+msgstr "Ver detalhes →"
 
 msgid "View all notifications"
-msgstr ""
+msgstr "Ver todas as notificações"
 
 msgid "View all notifications:"
+msgstr "Ver todas as notificações:"
+
+#, python-format
+msgid "❌ **%(event)s** has been cancelled."
+msgstr "❌ **%(event)s** foi cancelado."
+
+#, python-format
+msgid "**%(org)s** has published a new event: **%(event)s**!"
+msgstr "**%(org)s** publicou um novo evento: **%(event)s**!"
+
+#, python-format
+msgid "Reminder: **%(event)s** is tomorrow!"
+msgstr "Lembrete: **%(event)s** é amanhã!"
+
+#, python-format
+msgid "Reminder: **%(event)s** is in **%(days)s days**"
+msgstr "Lembrete: **%(event)s** é em **%(days)s dias**"
+
+#, python-format
+msgid "**%(follower)s** started following **%(series)s**."
+msgstr "**%(follower)s** começou a seguir **%(series)s**."
+
+#, python-format
+msgid "Important update about **%(event)s**"
+msgstr "Atualização importante sobre **%(event)s**"
+
+msgid "Message from Organizers:"
+msgstr "Mensagem dos organizadores:"
+
+msgid "You're Invited"
+msgstr "Você está convidado(a)"
+
+msgid "View"
+msgstr "Ver"
+
+msgid "requested an invitation to"
+msgstr "solicitou um convite para"
+
+#, python-format
+msgid "You are now a **%(role)s** of **%(org)s**!"
+msgstr "Você agora é **%(role)s** de **%(org)s**!"
+
+msgid "requested to join"
+msgstr "solicitou entrada em"
+
+#, python-format
+msgid "**%(org)s** created a new event: **%(event)s**"
+msgstr "**%(org)s** criou um novo evento: **%(event)s**"
+
+#, python-format
+msgid "New event in **%(series)s**: **%(event)s**"
+msgstr "Novo evento em **%(series)s**: **%(event)s**"
+
+#, python-format
+msgid "**%(sender)s** sent a message to **%(org)s**."
+msgstr "**%(sender)s** enviou uma mensagem para **%(org)s**."
+
+#, python-format
+msgid "**%(follower)s** started following **%(org)s**."
+msgstr "**%(follower)s** começou a seguir **%(org)s**."
+
+#, python-format
+msgid "Thank you! Your payment for **%(event)s** has been confirmed. ✅"
+msgstr "Obrigado! Seu pagamento para **%(event)s** foi confirmado. ✅"
+
+#, python-format
+msgid "🍽️ New potluck item **\"%(item)s\"** added to **%(event)s**."
 msgstr ""
+"🍽️ Novo item do prato compartilhado **\"%(item)s\"** adicionado a "
+"**%(event)s**."
+
+#, python-format
+msgid ""
+"🍽️✅ New potluck item **\"%(item)s\"** added and claimed for **%(event)s**."
+msgstr ""
+"🍽️✅ Novo item do prato compartilhado **\"%(item)s\"** adicionado e reservado "
+"para **%(event)s**."
+
+#, python-format
+msgid ""
+"Your questionnaire **%(questionnaire)s** for **%(event)s** has been approved!"
+msgstr ""
+"Seu questionário **%(questionnaire)s** para **%(event)s** foi aprovado!"
+
+#, python-format
+msgid "Your questionnaire **%(questionnaire)s** has been approved!"
+msgstr "Seu questionário **%(questionnaire)s** foi aprovado!"
+
+#, python-format
+msgid ""
+"Your questionnaire **%(questionnaire)s** for **%(event)s** was not approved."
+msgstr ""
+"Seu questionário **%(questionnaire)s** para **%(event)s** não foi aprovado."
+
+#, python-format
+msgid "Your questionnaire **%(questionnaire)s** was not approved."
+msgstr "Seu questionário **%(questionnaire)s** não foi aprovado."
+
+#, python-format
+msgid "**%(name)s** submitted the questionnaire **%(questionnaire)s**."
+msgstr "**%(name)s** enviou o questionário **%(questionnaire)s**."
+
+#, python-format
+msgid "**%(user)s** has cancelled their RSVP for **%(event)s**."
+msgstr "**%(user)s** cancelou o RSVP para **%(event)s**."
+
+#, python-format
+msgid "Your RSVP for **%(event)s** has been cancelled. ❌"
+msgstr "Seu RSVP para **%(event)s** foi cancelado. ❌"
+
+#, python-format
+msgid "**%(user)s** has RSVP'd **%(response)s** for **%(event)s**."
+msgstr "**%(user)s** confirmou presença (**%(response)s**) em **%(event)s**."
+
+msgid "RSVP ID:"
+msgstr "ID do RSVP:"
+
+#, python-format
+msgid "Your RSVP (**%(response)s**) for **%(event)s** has been confirmed! ✅"
+msgstr "Seu RSVP (**%(response)s**) para **%(event)s** foi confirmado! ✅"
+
+#, python-format
+msgid ""
+"**%(user)s** changed RSVP from **%(old)s** to **%(new)s** for **%(event)s**."
+msgstr ""
+"**%(user)s** mudou o RSVP de **%(old)s** para **%(new)s** em **%(event)s**."
+
+#, python-format
+msgid "Your RSVP for **%(event)s** updated from **%(old)s** to **%(new)s**. 🔄"
+msgstr ""
+"Seu RSVP para **%(event)s** atualizado de **%(old)s** para **%(new)s**. 🔄"
+
+#, python-format
+msgid "%(counter)s new event scheduled for **%(series)s**"
+msgid_plural "%(counter)s new events scheduled for **%(series)s**"
+msgstr[0] "%(counter)s novo evento agendado para **%(series)s**"
+msgstr[1] "%(counter)s novos eventos agendados para **%(series)s**"
+
+msgid "Read more"
+msgstr "Leia mais"
+
+#, python-format
+msgid "**%(holder)s** cancelled their ticket for **%(event)s**."
+msgstr "**%(holder)s** cancelou o ingresso para **%(event)s**."
+
+#, python-format
+msgid ""
+"**%(holder)s**'s ticket for **%(event)s** was refunded via the Stripe "
+"dashboard."
+msgstr ""
+"O ingresso de **%(holder)s** para **%(event)s** foi reembolsado pelo painel "
+"do Stripe."
+
+#, python-format
+msgid "**%(holder)s**'s ticket for **%(event)s** has been cancelled."
+msgstr "O ingresso de **%(holder)s** para **%(event)s** foi cancelado."
+
+#, python-format
+msgid "You cancelled your ticket for **%(event)s**."
+msgstr "Você cancelou seu ingresso para **%(event)s**."
+
+#, python-format
+msgid "Your ticket for **%(event)s** has been cancelled and refunded."
+msgstr "Seu ingresso para **%(event)s** foi cancelado e reembolsado."
+
+#, python-format
+msgid "Your ticket for **%(event)s** has been cancelled."
+msgstr "Seu ingresso para **%(event)s** foi cancelado."
+
+#, python-format
+msgid ""
+"A refund of **%(amount)s %(currency)s** has been issued to the ticket holder."
+msgstr ""
+"Um reembolso de **%(amount)s %(currency)s** foi emitido para o titular do "
+"ingresso."
+
+#, python-format
+msgid ""
+"A refund of **%(amount)s %(currency)s** will be processed within 5-10 "
+"business days."
+msgstr ""
+"Um reembolso de **%(amount)s %(currency)s** será processado em 5 a 10 dias "
+"úteis."
+
+#, python-format
+msgid "You have been checked in for **%(event)s**! ✅"
+msgstr "Seu check-in foi feito para **%(event)s**! ✅"
+
+#, python-format
+msgid "**%(holder)s** has registered for **%(event)s**."
+msgstr "**%(holder)s** se inscreveu em **%(event)s**."
+
+#, python-format
+msgid "Your ticket for **%(event)s** is pending payment confirmation. ⏳"
+msgstr ""
+"Seu ingresso para **%(event)s** está aguardando confirmação de pagamento. ⏳"
+
+#, python-format
+msgid "Your ticket for **%(event)s** is confirmed! 🎉"
+msgstr "Seu ingresso para **%(event)s** está confirmado! 🎉"
+
+#, python-format
+msgid "Your ticket refund for **%(event)s** has been processed. 💰"
+msgstr "O reembolso do seu ingresso para **%(event)s** foi processado. 💰"
+
+msgid ""
+"The refund will appear in your original payment method within 5-10 business "
+"days."
+msgstr ""
+"O reembolso aparecerá no seu método de pagamento original em 5 a 10 dias "
+"úteis."
+
+#, python-format
+msgid "**%(holder)s**'s ticket for **%(event)s** has been **%(action)s**."
+msgstr "O ingresso de **%(holder)s** para **%(event)s** foi **%(action)s**."
+
+#, python-format
+msgid "Your ticket for **%(event)s** has been confirmed! 🎉"
+msgstr "Seu ingresso para **%(event)s** foi confirmado! 🎉"
+
+#, python-format
+msgid "Your ticket for **%(event)s** has been updated. 🔄"
+msgstr "Seu ingresso para **%(event)s** foi atualizado. 🔄"
+
+msgid "for"
+msgstr "para"
+
+msgid "Final call — the waitlist has opened to everyone."
+msgstr "Última chamada — a lista de espera foi aberta para todos."
+
+msgid "Claim before"
+msgstr "Reservar até"
+
+msgid "Claim your spot"
+msgstr "Garanta sua vaga"
+
+#, python-format
+msgid "Your verification for **%(org)s** has been approved"
+msgstr "Sua verificação para **%(org)s** foi aprovada"
+
+msgid "requested verification for"
+msgstr "solicitou verificação para"
+
+#, python-format
+msgid "Your verification for **%(org)s** was not approved"
+msgstr "Sua verificação para **%(org)s** não foi aprovada"
+
+#, python-format
+msgid "<b>%(event)s</b> has been cancelled."
+msgstr "<b>%(event)s</b> foi cancelado."
+
+#, python-format
+msgid "<b>%(org)s</b> has published a new event: <b>%(event)s</b>!"
+msgstr "<b>%(org)s</b> publicou um novo evento: <b>%(event)s</b>!"
+
+#, python-format
+msgid "Reminder: <b>%(event)s</b> is tomorrow!"
+msgstr "Lembrete: <b>%(event)s</b> é amanhã!"
+
+#, python-format
+msgid "Reminder: <b>%(event)s</b> is in <b>%(days)s days</b>"
+msgstr "Lembrete: <b>%(event)s</b> é em <b>%(days)s dias</b>"
+
+#, python-format
+msgid "<b>%(follower)s</b> started following <b>%(series)s</b>."
+msgstr "<b>%(follower)s</b> começou a seguir <b>%(series)s</b>."
+
+#, python-format
+msgid "Important update about <b>%(event)s</b>"
+msgstr "Atualização importante sobre <b>%(event)s</b>"
+
+#, python-format
+msgid "<b>You're invited to %(event)s</b>"
+msgstr "<b>Você está convidado(a) para %(event)s</b>"
+
+msgid "RSVP Required"
+msgstr "RSVP obrigatório"
+
+msgid "Tickets Required"
+msgstr "Ingressos obrigatórios"
+
+#, python-format
+msgid "You are now a <b>%(role)s</b> of <b>%(org)s</b>!"
+msgstr "Você agora é <b>%(role)s</b> de <b>%(org)s</b>!"
+
+msgid "<b>Role Updated</b>"
+msgstr "<b>Cargo atualizado</b>"
+
+msgid "<b>Membership Removed</b>"
+msgstr "<b>Associação removida</b>"
+
+msgid "<b>Request Approved</b>"
+msgstr "<b>Solicitação aprovada</b>"
+
+msgid "<b>Request Declined</b>"
+msgstr "<b>Solicitação recusada</b>"
+
+#, python-format
+msgid "<b>%(org)s</b> created a new event: <b>%(event)s</b>"
+msgstr "<b>%(org)s</b> criou um novo evento: <b>%(event)s</b>"
+
+#, python-format
+msgid "New event in <b>%(series)s</b>: <b>%(event)s</b>"
+msgstr "Novo evento em <b>%(series)s</b>: <b>%(event)s</b>"
+
+msgid "Open Revel to read the full message."
+msgstr "Abra o Revel para ler a mensagem completa."
+
+#, python-format
+msgid "<b>%(follower)s</b> started following <b>%(org)s</b>."
+msgstr "<b>%(follower)s</b> começou a seguir <b>%(org)s</b>."
+
+#, python-format
+msgid "Payment confirmed for <b>%(event)s</b>!"
+msgstr "Pagamento confirmado para <b>%(event)s</b>!"
+
+msgid "Your ticket is now active!"
+msgstr "Seu ingresso já está ativo!"
+
+#, python-format
+msgid "<b>%(actor)s</b> claimed <b>\"%(item)s\"</b> for %(event)s."
+msgstr "<b>%(actor)s</b> reservou <b>\"%(item)s\"</b> para %(event)s."
+
+#, python-format
+msgid "<b>\"%(item)s\"</b> has been claimed for %(event)s."
+msgstr "<b>\"%(item)s\"</b> foi reservado para %(event)s."
+
+#, python-format
+msgid ""
+"<b>%(actor)s</b> added <b>\"%(item)s\"</b> to the potluck for %(event)s."
+msgstr ""
+"<b>%(actor)s</b> adicionou <b>\"%(item)s\"</b> ao prato compartilhado de "
+"%(event)s."
+
+#, python-format
+msgid "New potluck item <b>\"%(item)s\"</b> added to <b>%(event)s</b>."
+msgstr ""
+"Novo item do prato compartilhado <b>\"%(item)s\"</b> adicionado a "
+"<b>%(event)s</b>."
+
+#, python-format
+msgid "<b>%(actor)s</b> added and claimed <b>\"%(item)s\"</b> for %(event)s."
+msgstr ""
+"<b>%(actor)s</b> adicionou e reservou <b>\"%(item)s\"</b> para %(event)s."
+
+#, python-format
+msgid ""
+"New potluck item <b>\"%(item)s\"</b> added and claimed for <b>%(event)s</b>."
+msgstr ""
+"Novo item do prato compartilhado <b>\"%(item)s\"</b> adicionado e reservado "
+"para <b>%(event)s</b>."
+
+#, python-format
+msgid "<b>\"%(item)s\"</b> has been removed from the potluck for %(event)s."
+msgstr "<b>\"%(item)s\"</b> foi removido do prato compartilhado de %(event)s."
+
+#, python-format
+msgid "<b>\"%(item)s\"</b> is now available for %(event)s."
+msgstr "<b>\"%(item)s\"</b> já está disponível para %(event)s."
+
+#, python-format
+msgid "<b>\"%(item)s\"</b> has been updated for %(event)s."
+msgstr "<b>\"%(item)s\"</b> foi atualizado para %(event)s."
+
+#, python-format
+msgid ""
+"<b>Your questionnaire %(questionnaire)s for %(event)s has been approved!</b>"
+msgstr "<b>Seu questionário %(questionnaire)s para %(event)s foi aprovado!</b>"
+
+#, python-format
+msgid "<b>Your questionnaire %(questionnaire)s has been approved!</b>"
+msgstr "<b>Seu questionário %(questionnaire)s foi aprovado!</b>"
+
+#, python-format
+msgid ""
+"<b>Your questionnaire %(questionnaire)s for %(event)s was not approved.</b>"
+msgstr ""
+"<b>Seu questionário %(questionnaire)s para %(event)s não foi aprovado.</b>"
+
+#, python-format
+msgid "<b>Your questionnaire %(questionnaire)s was not approved.</b>"
+msgstr "<b>Seu questionário %(questionnaire)s não foi aprovado.</b>"
+
+msgid "<b>New Questionnaire Submission</b>"
+msgstr "<b>Nova submissão de questionário</b>"
+
+msgid "submitted"
+msgstr "enviou"
+
+#, python-format
+msgid "<b>%(user)s</b> has cancelled their RSVP for <b>%(event)s</b>."
+msgstr "<b>%(user)s</b> cancelou o RSVP para <b>%(event)s</b>."
+
+#, python-format
+msgid "Your RSVP for <b>%(event)s</b> has been cancelled."
+msgstr "Seu RSVP para <b>%(event)s</b> foi cancelado."
+
+#, python-format
+msgid "<b>%(user)s</b> has RSVP'd <b>%(response)s</b> for <b>%(event)s</b>."
+msgstr ""
+"<b>%(user)s</b> confirmou presença (<b>%(response)s</b>) em <b>%(event)s</b>."
+
+#, python-format
+msgid "Your RSVP (<b>%(response)s</b>) for <b>%(event)s</b> confirmed!"
+msgstr "Seu RSVP (<b>%(response)s</b>) para <b>%(event)s</b> confirmado!"
+
+#, python-format
+msgid ""
+"<b>%(user)s</b> changed RSVP from %(old)s to <b>%(new)s</b> for "
+"<b>%(event)s</b>."
+msgstr ""
+"<b>%(user)s</b> mudou o RSVP de %(old)s para <b>%(new)s</b> em <b>%(event)s</"
+"b>."
+
+msgid "Updated RSVP:"
+msgstr "RSVP atualizado:"
+
+msgid "Previous:"
+msgstr "Anterior:"
+
+msgid "New:"
+msgstr "Novo:"
+
+#, python-format
+msgid "RSVP for <b>%(event)s</b> updated from %(old)s to <b>%(new)s</b>."
+msgstr "RSVP para <b>%(event)s</b> atualizado de %(old)s para <b>%(new)s</b>."
+
+#, python-format
+msgid "%(counter)s new event scheduled for <b>%(series)s</b>"
+msgid_plural "%(counter)s new events scheduled for <b>%(series)s</b>"
+msgstr[0] "%(counter)s novo evento agendado para <b>%(series)s</b>"
+msgstr[1] "%(counter)s novos eventos agendados para <b>%(series)s</b>"
+
+#, python-format
+msgid "<b>%(holder)s</b> cancelled their ticket for <b>%(event)s</b>."
+msgstr "<b>%(holder)s</b> cancelou o ingresso para <b>%(event)s</b>."
+
+#, python-format
+msgid ""
+"<b>%(holder)s</b>'s ticket for <b>%(event)s</b> was refunded via the Stripe "
+"dashboard."
+msgstr ""
+"O ingresso de <b>%(holder)s</b> para <b>%(event)s</b> foi reembolsado pelo "
+"painel do Stripe."
+
+#, python-format
+msgid "<b>%(holder)s</b>'s ticket for <b>%(event)s</b> has been cancelled."
+msgstr "O ingresso de <b>%(holder)s</b> para <b>%(event)s</b> foi cancelado."
+
+#, python-format
+msgid "You cancelled your ticket for <b>%(event)s</b>."
+msgstr "Você cancelou seu ingresso para <b>%(event)s</b>."
+
+#, python-format
+msgid "Your ticket for <b>%(event)s</b> has been cancelled and refunded."
+msgstr "Seu ingresso para <b>%(event)s</b> foi cancelado e reembolsado."
+
+#, python-format
+msgid "Your ticket for <b>%(event)s</b> has been cancelled."
+msgstr "Seu ingresso para <b>%(event)s</b> foi cancelado."
+
+#, python-format
+msgid "Refund of %(amount)s %(currency)s issued to the ticket holder."
+msgstr ""
+"Reembolso de %(amount)s %(currency)s emitido para o titular do ingresso."
+
+#, python-format
+msgid ""
+"Refund of %(amount)s %(currency)s will be processed within 5-10 business "
+"days."
+msgstr ""
+"Reembolso de %(amount)s %(currency)s será processado em 5 a 10 dias úteis."
+
+#, python-format
+msgid "You have been checked in for <b>%(event)s</b>"
+msgstr "Seu check-in foi feito para <b>%(event)s</b>"
+
+#, python-format
+msgid "<b>%(holder)s</b> has registered for <b>%(event)s</b>."
+msgstr "<b>%(holder)s</b> se inscreveu em <b>%(event)s</b>."
+
+#, python-format
+msgid "Ticket Pending for <b>%(event)s</b>"
+msgstr "Ingresso pendente para <b>%(event)s</b>"
+
+#, python-format
+msgid "Ticket Confirmed for <b>%(event)s</b>"
+msgstr "Ingresso confirmado para <b>%(event)s</b>"
+
+#, python-format
+msgid "Your ticket refund for <b>%(event)s</b> has been processed."
+msgstr "O reembolso do seu ingresso para <b>%(event)s</b> foi processado."
+
+msgid "Refund will appear within 5-10 business days."
+msgstr "O reembolso aparecerá em 5 a 10 dias úteis."
+
+#, python-format
+msgid ""
+"<b>%(holder)s</b>'s ticket for <b>%(event)s</b> has been <b>%(action)s</b>."
+msgstr ""
+"O ingresso de <b>%(holder)s</b> para <b>%(event)s</b> foi <b>%(action)s</b>."
+
+msgid "Your payment has been confirmed!"
+msgstr "Seu pagamento foi confirmado!"
+
+#, python-format
+msgid "Ticket Update for <b>%(event)s</b>"
+msgstr "Atualização de ingresso para <b>%(event)s</b>"
+
+msgid "Updated Information:"
+msgstr "Informações atualizadas:"
+
+#, python-format
+msgid ""
+"Your verification for **%(org)s** has been approved. You now have full "
+"access."
+msgstr ""
+"Sua verificação para **%(org)s** foi aprovada. Agora você tem acesso "
+"completo."
+
+#, python-format
+msgid "Your verification for **%(org)s** was not approved at this time."
+msgstr "Sua verificação para **%(org)s** não foi aprovada no momento."
+
+#, python-format
+msgid "%(weekday)s, %(date)s at %(time)s %(tz)s"
+msgstr "%(weekday)s, %(date)s às %(time)s %(tz)s"
+
+#, python-format
+msgid "%(date)s at %(time)s"
+msgstr "%(date)s às %(time)s"
 
 msgid "Anonymity flags are immutable after a poll is created."
 msgstr ""
