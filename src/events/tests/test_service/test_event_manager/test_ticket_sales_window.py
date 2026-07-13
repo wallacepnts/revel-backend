@@ -8,6 +8,7 @@ from django.utils import timezone
 from accounts.models import RevelUser
 from events.models import Event, TicketTier
 from events.service.event_manager import EligibilityService, Reasons
+from events.service.event_manager.gates import TicketSalesGate
 
 pytestmark = pytest.mark.django_db
 
@@ -170,11 +171,17 @@ def test_ticket_sales_uses_event_end_when_sales_end_not_set(public_user: RevelUs
 
 
 def test_ticket_sales_blocks_when_event_ended_and_no_sales_end(public_user: RevelUser, public_event: Event) -> None:
-    """Test that tickets are blocked when event has ended and no sales_end_at is set."""
+    """Test that TicketSalesGate blocks when event has ended and no sales_end_at is set.
+
+    Exercises TicketSalesGate directly rather than through the full gate chain: with
+    event.end in the past, EventStatusGate (an earlier gate) would deny access first
+    for a different reason ("Event has finished"), masking the sales-window fallback
+    logic this test targets.
+    """
     # Set up event with tickets required and end time in the past
     public_event.requires_ticket = True
     public_event.start = timezone.now() - timedelta(hours=12)
-    public_event.end = timezone.now() + timedelta(hours=1)
+    public_event.end = timezone.now() - timedelta(hours=1)
     public_event.save()
 
     public_event.ticket_tiers.all().delete()
@@ -183,14 +190,15 @@ def test_ticket_sales_blocks_when_event_ended_and_no_sales_end(public_user: Reve
     TicketTier.objects.create(
         event=public_event,
         name="General",
-        sales_start_at=public_event.start - timedelta(days=4),  # Started 4 hours ago
+        sales_start_at=public_event.start - timedelta(days=4),
         sales_end_at=None,  # No explicit end time - should use event end
     )
 
     handler = EligibilityService(user=public_user, event=public_event)
-    eligibility = handler.check_eligibility()
+    eligibility = TicketSalesGate(handler).check()
 
     # Should be blocked since event has ended
+    assert eligibility is not None
     assert eligibility.allowed is False
     assert eligibility.reason == Reasons.NO_TICKETS_ON_SALE
 

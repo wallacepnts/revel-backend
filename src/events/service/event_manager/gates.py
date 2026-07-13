@@ -746,7 +746,7 @@ class TicketSalesGate(BaseEligibilityGate):
                 sales_active = False
 
             # Use event end date if sales_end_at is not provided
-            sales_end_time = tier.sales_end_at or self.event.start
+            sales_end_time = tier.sales_end_at or self.event.end
             if sales_end_time and current_time > sales_end_time:
                 sales_active = False
 
