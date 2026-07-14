@@ -248,7 +248,7 @@ msgid "Set Password"
 msgstr ""
 
 msgid "If you didn't request this, you can safely ignore this email."
-msgstr ""
+msgstr "Se você não solicitou isso, pode ignorar este e-mail com segurança."
 
 msgid "Thank you,<br>The Revel Team"
 msgstr "Obrigado,<br>A equipe do Revel"
@@ -260,6 +260,8 @@ msgid ""
 "Thank you,\n"
 "The Revel Team"
 msgstr ""
+"Obrigado,\n"
+"A equipe do Revel"
 
 msgid "Activate your account"
 msgstr ""
@@ -578,19 +580,19 @@ msgid "Reminder: Verify your Revel account"
 msgstr ""
 
 msgid "Password Reset Request"
-msgstr ""
+msgstr "Solicitação de Redefinição de Senha"
 
 msgid "Please click the link below to set up a new password:"
-msgstr ""
+msgstr "Clique no link abaixo para definir uma nova senha:"
 
 msgid "Reset Password"
-msgstr ""
+msgstr "Redefinir Senha"
 
 msgid "Password reset request."
-msgstr ""
+msgstr "Solicitação de redefinição de senha."
 
 msgid "Password reset request"
-msgstr ""
+msgstr "Solicitação de redefinição de senha"
 
 msgid "Home"
 msgstr "Início"
