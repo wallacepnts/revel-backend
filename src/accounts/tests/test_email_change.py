@@ -73,7 +73,7 @@ class TestRequestEmailChange:
         # Exactly the confirmation + notice emails — no extra/unrelated dispatch.
         assert mock_send.call_count == 2
         conf_call = _call_for(mock_send, AccountEmail.CHANGE_CONFIRMATION)
-        assert conf_call.args == (AccountEmail.CHANGE_CONFIRMATION, "new@example.com")
+        assert conf_call.args == (AccountEmail.CHANGE_CONFIRMATION, "new@example.com", user.language)
         assert conf_call.kwargs == {"token": token}
         notice_call = _call_for(mock_send, AccountEmail.CHANGE_NOTICE)
         assert notice_call.args[1] == user.email
@@ -185,10 +185,10 @@ class TestConfirmEmailChange:
         assert mock_send.call_count == 2
         expected_context = {"old_email": old_email, "new_email": "new@example.com"}
         old_call = _call_for(mock_send, AccountEmail.CHANGE_COMPLETED_OLD)
-        assert old_call.args == (AccountEmail.CHANGE_COMPLETED_OLD, old_email)
+        assert old_call.args == (AccountEmail.CHANGE_COMPLETED_OLD, old_email, user.language)
         assert old_call.kwargs == {"context": expected_context}
         new_call = _call_for(mock_send, AccountEmail.CHANGE_COMPLETED_NEW)
-        assert new_call.args == (AccountEmail.CHANGE_COMPLETED_NEW, "new@example.com")
+        assert new_call.args == (AccountEmail.CHANGE_COMPLETED_NEW, "new@example.com", user.language)
         assert new_call.kwargs == {"context": expected_context}
 
     @patch("accounts.tasks.send_account_email.delay")

@@ -20,6 +20,7 @@ import enum
 import structlog
 from celery import shared_task
 from django.template.loader import render_to_string
+from django.utils import translation
 
 from common.models import SiteSettings
 from common.tasks import send_email
@@ -99,6 +100,7 @@ _CONFIGS: dict[AccountEmail, _Config] = {
 def send_account_email(
     email_type: str,
     to: str,
+    language: str,
     *,
     token: str | None = None,
     context: dict[str, str] | None = None,
@@ -108,6 +110,9 @@ def send_account_email(
     Args:
         email_type: An :class:`AccountEmail` value selecting the message and its template set.
         to: Recipient email address.
+        language: The recipient's preferred language (``RevelUser.language``) — activated for
+            the duration of the render, since this task runs outside any request and would
+            otherwise fall back to ``settings.LANGUAGE_CODE`` regardless of the recipient.
         token: Single-use token for the link-bearing emails (verification, activation,
             password reset, email-change confirmation, deletion). ``None`` for the
             informational email-change emails.
@@ -134,9 +139,10 @@ def send_account_email(
             raise ValueError(f"{email_type} email requires a token")
         body_context["action_link"] = site_settings.frontend_base_url + config.link_path.format(token=token)
 
-    subject = str(render_to_string(f"accounts/emails/{config.template_base}_subject.txt"))
-    body = render_to_string(f"accounts/emails/{config.template_base}_body.txt", body_context)
-    html_body = render_to_string(f"accounts/emails/{config.template_base}_body.html", body_context)
+    with translation.override(language):
+        subject = str(render_to_string(f"accounts/emails/{config.template_base}_subject.txt"))
+        body = render_to_string(f"accounts/emails/{config.template_base}_body.txt", body_context)
+        html_body = render_to_string(f"accounts/emails/{config.template_base}_body.html", body_context)
     send_email(to=to, subject=subject, body=body, html_body=html_body)
 
     logger.info("account_email_sent", email_type=email_type, to=to)

@@ -56,7 +56,7 @@ def test_link_email_renders_byte_for_byte(
     expected_context = {"frontend_base_url": site_settings.frontend_base_url, "action_link": full_link}
     exp_subject, exp_body, exp_html = _render(base, expected_context)
 
-    send_account_email(email_type, to, token=_TOKEN)
+    send_account_email(email_type, to, "en", token=_TOKEN)
 
     mock_send.assert_called_once()
     kwargs = mock_send.call_args.kwargs
@@ -99,7 +99,7 @@ def test_context_email_renders_byte_for_byte(
     expected_context = {**context, "frontend_base_url": site_settings.frontend_base_url}
     exp_subject, exp_body, exp_html = _render(base, expected_context)
 
-    send_account_email(email_type, to, context=context)
+    send_account_email(email_type, to, "en", context=context)
 
     mock_send.assert_called_once()
     kwargs = mock_send.call_args.kwargs
@@ -113,7 +113,7 @@ def test_context_email_renders_byte_for_byte(
 def test_link_email_without_token_raises(mock_send: MagicMock) -> None:
     """A link-bearing email dispatched without a token is a programming error, not a silent no-op."""
     with pytest.raises(ValueError, match="requires a token"):
-        send_account_email(AccountEmail.VERIFICATION, "u@example.com")
+        send_account_email(AccountEmail.VERIFICATION, "u@example.com", "en")
     mock_send.assert_not_called()
 
 
@@ -121,7 +121,7 @@ def test_link_email_without_token_raises(mock_send: MagicMock) -> None:
 def test_missing_required_context_raises(mock_send: MagicMock) -> None:
     """A message dispatched without its required context keys fails fast, not with a partial render."""
     with pytest.raises(ValueError, match="requires context keys: old_email, new_email"):
-        send_account_email(AccountEmail.CHANGE_COMPLETED_OLD, "old@example.com")
+        send_account_email(AccountEmail.CHANGE_COMPLETED_OLD, "old@example.com", "en")
     mock_send.assert_not_called()
 
 

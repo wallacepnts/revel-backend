@@ -80,7 +80,7 @@ def test_register_user_success(mock_send_email: MagicMock, valid_register_payloa
     assert user.username == valid_register_payload.email
     assert not user.email_verified
     assert user.is_active  # Active by default to allow email verification
-    mock_send_email.assert_called_once_with(AccountEmail.VERIFICATION, user.email, token=token)
+    mock_send_email.assert_called_once_with(AccountEmail.VERIFICATION, user.email, user.language, token=token)
 
 
 @patch("accounts.tasks.send_account_email.delay")
@@ -278,7 +278,7 @@ def test_request_password_reset_success(mock_send_email: MagicMock, user: RevelU
     """Test requesting a password reset sends an email for an existing user."""
     token = account_service.request_password_reset(user.email)
     assert token is not None
-    mock_send_email.assert_called_once_with(AccountEmail.PASSWORD_RESET, user.email, token=token)
+    mock_send_email.assert_called_once_with(AccountEmail.PASSWORD_RESET, user.email, user.language, token=token)
 
 
 @patch("accounts.tasks.send_account_email.delay")
@@ -305,7 +305,9 @@ def test_request_password_reset_for_guest_user(mock_send_email: MagicMock, guest
     """Test that guest users can request a password reset (converts them on reset)."""
     token = account_service.request_password_reset(guest_user.email)
     assert token is not None
-    mock_send_email.assert_called_once_with(AccountEmail.PASSWORD_RESET, guest_user.email, token=token)
+    mock_send_email.assert_called_once_with(
+        AccountEmail.PASSWORD_RESET, guest_user.email, guest_user.language, token=token
+    )
 
 
 def test_reset_password_converts_guest_user(guest_user: RevelUser) -> None:
@@ -360,7 +362,7 @@ def test_request_account_deletion(mock_send_email: MagicMock, user: RevelUser) -
     """Test that requesting account deletion sends the correct email task."""
     token = account_service.request_account_deletion(user)
     assert token is not None
-    mock_send_email.assert_called_once_with(AccountEmail.DELETION, user.email, token=token)
+    mock_send_email.assert_called_once_with(AccountEmail.DELETION, user.email, user.language, token=token)
 
 
 # transaction=True: confirm_account_deletion dispatches delete_user_account via transaction.on_commit.

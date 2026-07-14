@@ -107,7 +107,7 @@ def test_link_email_delivered_to_mailpit(email_type: AccountEmail, link_path: st
     to = _unique_recipient()
     expected_link = f"{base_url}{link_path}{_TOKEN}"
 
-    send_account_email(email_type, to, token=_TOKEN)
+    send_account_email(email_type, to, "en", token=_TOKEN)
 
     msg = _wait_for_message(to)
     assert msg["To"][0]["Address"] == to
@@ -123,7 +123,7 @@ def test_change_notice_delivered_to_mailpit() -> None:
     to = _unique_recipient()
     masked = "n***@example.com"
 
-    send_account_email(AccountEmail.CHANGE_NOTICE, to, context={"masked_new_email": masked})
+    send_account_email(AccountEmail.CHANGE_NOTICE, to, "en", context={"masked_new_email": masked})
 
     msg = _wait_for_message(to)
     assert msg["To"][0]["Address"] == to
@@ -147,7 +147,7 @@ def test_change_completed_delivered_to_mailpit(email_type: AccountEmail) -> None
     to = _unique_recipient()
     old_email, new_email = "old-addr@example.com", "new-addr@example.com"
 
-    send_account_email(email_type, to, context={"old_email": old_email, "new_email": new_email})
+    send_account_email(email_type, to, "en", context={"old_email": old_email, "new_email": new_email})
 
     msg = _wait_for_message(to)
     assert msg["To"][0]["Address"] == to
