@@ -1,0 +1,18 @@
+{% load email_tags %}<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}DuRock RJ{% endblock %}</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f4f5f7;">
+    <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
+        <div style="padding: 24px; text-align: left;">
+            <img src="{% email_logo_url %}" alt="DuRock RJ" style="height: 40px;">
+        </div>
+        <div style="padding: 0 24px 24px;">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+</html>
