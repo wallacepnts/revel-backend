@@ -2,7 +2,7 @@
 
 Covers:
 - Pre-flight checks: skips payouts when referrer lacks Stripe charges,
-  billing profile, or self-billing agreement.
+  billing profile, or a complete billing profile.
 - Happy path: creates Stripe transfer, updates status to PAID, stores transfer ID.
 - Stripe error: updates status to FAILED, propagates exception for Celery retry.
 - Email dispatch with correct from_email, reply_to, and attachment.
@@ -190,32 +190,6 @@ class TestPayoutPreflightChecks:
 
     @patch("accounts.service.payout_statement_service.generate_payout_statement")
     @patch("accounts.tasks.payouts.stripe.Transfer.create")
-    def test_skips_when_self_billing_not_agreed(
-        self,
-        mock_transfer: MagicMock,
-        mock_gen_statement: MagicMock,
-        calculated_payout: ReferralPayout,
-        billing_profile: UserBillingProfile,
-        site_settings: SiteSettings,
-    ) -> None:
-        """Payout is skipped (reverted to CALCULATED) when referrer has not agreed to self-billing."""
-        # Arrange
-        billing_profile.self_billing_agreed = False
-        billing_profile.save(update_fields=["self_billing_agreed"])
-
-        # Act
-        stats = process_referral_payouts()
-
-        # Assert
-        assert stats["skipped"] == 1
-        assert stats["paid"] == 0
-        mock_transfer.assert_not_called()
-        mock_gen_statement.assert_not_called()
-        calculated_payout.refresh_from_db()
-        assert calculated_payout.status == ReferralPayout.ReferralPayoutStatus.CALCULATED
-
-    @patch("accounts.service.payout_statement_service.generate_payout_statement")
-    @patch("accounts.tasks.payouts.stripe.Transfer.create")
     def test_skips_when_billing_info_incomplete(
         self,
         mock_transfer: MagicMock,
@@ -225,8 +199,8 @@ class TestPayoutPreflightChecks:
         site_settings: SiteSettings,
     ) -> None:
         """Payout is skipped when billing profile exists but has empty required fields."""
-        billing_profile.vat_country_code = ""
-        billing_profile.save(update_fields=["vat_country_code"])
+        billing_profile.billing_name = ""
+        billing_profile.save(update_fields=["billing_name"])
 
         stats = process_referral_payouts()
 

@@ -91,10 +91,7 @@ def _validate_payout_eligibility(payout: ReferralPayout, referrer: RevelUser) ->
         return "payout_skipped_no_billing"
 
     profile = referrer.billing_profile
-    if not profile.self_billing_agreed:
-        return "payout_skipped_no_agreement"
-
-    missing_fields = [f for f in ("billing_name", "vat_country_code", "billing_address") if not getattr(profile, f)]
+    missing_fields = [f for f in ("billing_name", "billing_address") if not getattr(profile, f)]
     if missing_fields:
         logger.info(
             "payout_skipped_incomplete_billing",
@@ -123,8 +120,7 @@ def process_referral_payouts() -> dict[str, int]:
 
     For each payout:
     1. Claim the row (``CALCULATED → PENDING`` under ``select_for_update``).
-    2. Verify referrer has a connected Stripe account, a billing profile,
-       and has agreed to self-billing.
+    2. Verify referrer has a connected Stripe account and a complete billing profile.
     3. Create a Stripe Transfer (with idempotency key ``payout.id``).
     4. On success → ``PAID``; on Stripe error → ``FAILED`` (logged, loop continues).
     5. Dispatch the per-payout statement+email task (retryable, idempotent) so a
