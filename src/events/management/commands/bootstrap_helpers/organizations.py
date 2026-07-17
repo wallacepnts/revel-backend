@@ -56,17 +56,17 @@ that bring communities together.
     # restricted to MEMBERS_ONLY with a tier whitelist) can be exercised against
     # demo data: one member is on the default tier only, another is on a tier
     # that does NOT include the default.
-    default_tier_alpha = events_models.MembershipTier.objects.get(organization=org_alpha, name="General membership")
+    default_tier_alpha = events_models.MembershipTier.objects.get(organization=org_alpha, name="Associação geral")
     founders_tier_alpha = events_models.MembershipTier.objects.create(
         organization=org_alpha,
         name="Founders",
         description="Founding members of the collective.",
     )
-    # Charlie (org_alpha_member) → General membership only.
+    # Charlie (org_alpha_member) → Associação geral only.
     events_models.OrganizationMember.objects.create(
         organization=org_alpha, user=state.users["org_alpha_member"], tier=default_tier_alpha
     )
-    # Karen (multi_org_user) → Founders tier (does NOT have General membership).
+    # Karen (multi_org_user) → Founders tier (does NOT have Associação geral).
     events_models.OrganizationMember.objects.create(
         organization=org_alpha, user=state.users["multi_org_user"], tier=founders_tier_alpha
     )
@@ -107,7 +107,7 @@ who want to shape the future.
     org_beta.staff_members.add(state.users["org_beta_staff"])
 
     # Add members with default tier
-    default_tier_beta = events_models.MembershipTier.objects.get(organization=org_beta, name="General membership")
+    default_tier_beta = events_models.MembershipTier.objects.get(organization=org_beta, name="Associação geral")
     for user in [state.users["org_beta_member"], state.users["multi_org_user"], state.users["attendee_1"]]:
         events_models.OrganizationMember.objects.create(organization=org_beta, user=user, tier=default_tier_beta)
 

@@ -61,7 +61,7 @@ def organization_token(organization: Organization, organization_owner_user: Reve
     """An organization token that grants membership."""
     from events.models import MembershipTier
 
-    default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+    default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
     return OrganizationToken.objects.create(
         organization=organization, issuer=organization_owner_user, membership_tier=default_tier
     )
@@ -197,7 +197,7 @@ class TestApproveMembershipRequest:
         from events.models import MembershipTier
 
         tier = MembershipTier.objects.get(
-            organization=organization_membership_request.organization, name="General membership"
+            organization=organization_membership_request.organization, name="Associação geral"
         )
 
         assert not OrganizationMember.objects.filter(
@@ -312,7 +312,7 @@ class TestClaimInvitation:
         self, organization: Organization, organization_owner_user: RevelUser, nonmember_user: RevelUser
     ) -> None:
         """A token granting both staff and membership must apply both, not just staff."""
-        default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+        default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
         token = OrganizationToken.objects.create(
             organization=organization,
             issuer=organization_owner_user,
@@ -754,7 +754,7 @@ class TestCreateOrganizationTokenValidation:
         self, organization: Organization, organization_owner_user: RevelUser
     ) -> None:
         """Token with grants_membership=True can be created via service."""
-        default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+        default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
         token = organization_service.create_organization_token(
             organization=organization,
             issuer=organization_owner_user,
@@ -782,7 +782,7 @@ class TestCreateOrganizationTokenValidation:
         self, organization: Organization, organization_owner_user: RevelUser
     ) -> None:
         """Token with both grants enabled can be created via service."""
-        default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+        default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
         token = organization_service.create_organization_token(
             organization=organization,
             issuer=organization_owner_user,
@@ -813,7 +813,7 @@ class TestCreateOrganizationTokenFromPayload:
     def test_owner_can_create_staff_granting_token(
         self, organization: Organization, organization_owner_user: RevelUser
     ) -> None:
-        default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+        default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
         payload = schema.OrganizationTokenCreateSchema(
             name="Staff Token",
             grants_membership=True,
@@ -831,7 +831,7 @@ class TestCreateOrganizationTokenFromPayload:
     def test_non_owner_cannot_create_staff_granting_token(
         self, organization: Organization, organization_staff_user: RevelUser
     ) -> None:
-        default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+        default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
         payload = schema.OrganizationTokenCreateSchema(
             name="Staff Token",
             grants_membership=True,
@@ -847,7 +847,7 @@ class TestCreateOrganizationTokenFromPayload:
     def test_non_owner_can_create_membership_only_token(
         self, organization: Organization, organization_staff_user: RevelUser
     ) -> None:
-        default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+        default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
         payload = schema.OrganizationTokenCreateSchema(
             name="Member Token",
             grants_membership=True,
@@ -890,7 +890,7 @@ class TestUpdateOrganizationTokenService:
         organization_token: OrganizationToken,
         organization_staff_user: RevelUser,
     ) -> None:
-        default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+        default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
         payload = schema.OrganizationTokenUpdateSchema(
             grants_staff_status=True, grants_membership=True, membership_tier_id=default_tier.id
         )

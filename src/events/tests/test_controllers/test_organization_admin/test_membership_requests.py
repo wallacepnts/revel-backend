@@ -38,7 +38,7 @@ class TestManageMembershipRequests:
         """Test that an organization owner can approve a membership request."""
         # Get the default tier
         tier = MembershipTier.objects.get(
-            organization=organization_membership_request.organization, name="General membership"
+            organization=organization_membership_request.organization, name="Associação geral"
         )
 
         url = reverse(
@@ -90,7 +90,7 @@ class TestManageMembershipRequests:
         validation and was silently swallowed.
         """
         tier = MembershipTier.objects.get(
-            organization=organization_membership_request.organization, name="General membership"
+            organization=organization_membership_request.organization, name="Associação geral"
         )
         url = reverse(
             "api:approve_membership_request",

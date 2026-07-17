@@ -23,7 +23,7 @@ pytestmark = pytest.mark.django_db
 
 @pytest.fixture
 def tier(organization: Organization) -> MembershipTier:
-    return MembershipTier.objects.get(organization=organization, name="General membership")
+    return MembershipTier.objects.get(organization=organization, name="Associação geral")
 
 
 @pytest.fixture
@@ -82,7 +82,7 @@ class TestSyncMemberFromSubscription:
         OrganizationMember.objects.create(
             organization=organization,
             user=subscriber,
-            tier=MembershipTier.objects.get(organization=organization, name="General membership"),
+            tier=MembershipTier.objects.get(organization=organization, name="Associação geral"),
             status=OrganizationMember.MembershipStatus.ACTIVE,
         )
         pro_plan = subscription_service.create_plan(

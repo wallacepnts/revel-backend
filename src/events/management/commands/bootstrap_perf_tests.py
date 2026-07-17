@@ -215,7 +215,7 @@ This organization is used for Locust performance testing.
         self.org.staff_members.add(self.staff_user)
 
         # Add some members (first 20 preseeded users)
-        default_tier = events_models.MembershipTier.objects.get(organization=self.org, name="General membership")
+        default_tier = events_models.MembershipTier.objects.get(organization=self.org, name="Associação geral")
         for user in self.preseeded_users[:20]:
             events_models.OrganizationMember.objects.get_or_create(
                 organization=self.org,

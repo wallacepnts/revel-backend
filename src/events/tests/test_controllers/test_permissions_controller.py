@@ -14,8 +14,8 @@ def test_my_permissions_includes_membership_tiers(
     member_user: RevelUser,
 ) -> None:
     """Test that my_permissions endpoint returns membership tier information."""
-    # Get the default "General membership" tier that was created by the signal
-    default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+    # Get the default "Associação geral" tier that was created by the signal
+    default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
 
     # Update the existing membership (created by member_client fixture) to have a tier
     member = OrganizationMember.objects.get(organization=organization, user=member_user)
@@ -40,14 +40,14 @@ def test_my_permissions_includes_membership_tiers(
     # Check that memberships is a dict
     assert isinstance(data["memberships"], dict)
 
-    # Check that the first organization has the General membership tier
+    # Check that the first organization has the Associação geral tier
     org_id_str = str(organization.id)
     assert org_id_str in data["memberships"]
     assert isinstance(data["memberships"][org_id_str], dict)
     assert "member_since" in data["memberships"][org_id_str]
     assert "status" in data["memberships"][org_id_str]
     assert data["memberships"][org_id_str]["tier"]["id"] == str(default_tier.id)
-    assert data["memberships"][org_id_str]["tier"]["name"] == "General membership"
+    assert data["memberships"][org_id_str]["tier"]["name"] == "Associação geral"
 
     # Check that the second organization has the Gold tier
     org2_id_str = str(org2.id)

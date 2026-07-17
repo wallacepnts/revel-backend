@@ -98,7 +98,7 @@ def test_org_signal_dispatches_both_tasks_when_enabled(
     mock_pushover.assert_called_once_with(organization_id=str(org.id))
     mock_discord.assert_called_once_with(organization_id=str(org.id))
     # Default membership tier must still be created
-    assert MembershipTier.objects.filter(organization=org, name="General membership").exists()
+    assert MembershipTier.objects.filter(organization=org, name="Associação geral").exists()
 
 
 @pytest.mark.django_db(transaction=True)
@@ -115,4 +115,4 @@ def test_org_signal_does_not_dispatch_when_disabled(organization_owner_user: Rev
     mock_pushover.assert_not_called()
     mock_discord.assert_not_called()
     # MembershipTier still gets created regardless
-    assert MembershipTier.objects.filter(organization=org, name="General membership").exists()
+    assert MembershipTier.objects.filter(organization=org, name="Associação geral").exists()

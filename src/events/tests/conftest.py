@@ -292,8 +292,8 @@ def png_file(png_bytes: bytes) -> SimpleUploadedFile:
 
 @pytest.fixture
 def organization_token(organization: Organization, organization_owner_user: RevelUser) -> OrganizationToken:
-    # Get the default "General membership" tier created by the signal
-    default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+    # Get the default "Associação geral" tier created by the signal
+    default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
     return OrganizationToken.objects.create(
         organization=organization, name="Test Token", issuer=organization_owner_user, membership_tier=default_tier
     )

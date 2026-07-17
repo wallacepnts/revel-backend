@@ -33,7 +33,7 @@ def test_list_organization_tokens(organization_owner_client: Client, organizatio
 def test_create_organization_token(organization_owner_client: Client, organization: Organization) -> None:
     """Test that an organization owner can create a token."""
     # Get the default tier
-    default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+    default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
 
     url = reverse("api:create_organization_token", kwargs={"slug": organization.slug})
     payload = {
@@ -51,7 +51,7 @@ def test_create_organization_token_with_duration_zero_never_expires(
     organization_owner_client: Client, organization: Organization
 ) -> None:
     """Creating an org token with ``duration=0`` yields ``expires_at=None`` and a valid token."""
-    default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+    default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
     url = reverse("api:create_organization_token", kwargs={"slug": organization.slug})
     payload = {
         "name": "Never Expires Token",
@@ -75,7 +75,7 @@ def test_create_organization_token_with_positive_duration_sets_future_expiry(
     organization_owner_client: Client, organization: Organization
 ) -> None:
     """Sanity: positive duration still produces an ``expires_at`` in the future."""
-    default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+    default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
     url = reverse("api:create_organization_token", kwargs={"slug": organization.slug})
     payload = {
         "name": "60min Token",
@@ -136,7 +136,7 @@ def test_create_staff_granting_token_by_non_owner_returns_403(
     organization: Organization, organization_staff_user: RevelUser
 ) -> None:
     """Staff with manage_members permission cannot create staff-granting tokens."""
-    default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+    default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
     staff_client = _make_staff_client(organization, organization_staff_user)
     url = reverse("api:create_organization_token", kwargs={"slug": organization.slug})
     payload = {
@@ -153,7 +153,7 @@ def test_create_staff_granting_token_by_owner_succeeds(
     organization_owner_client: Client, organization: Organization
 ) -> None:
     """Organization owner can create tokens that grant staff status."""
-    default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+    default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
     url = reverse("api:create_organization_token", kwargs={"slug": organization.slug})
     payload = {
         "name": "Staff Token",
@@ -194,7 +194,7 @@ def test_delete_staff_granting_token_by_owner_succeeds(
     organization_owner_client: Client, organization: Organization, organization_owner_user: RevelUser
 ) -> None:
     """Organization owner can delete a staff-granting token."""
-    default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+    default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
     staff_token = OrganizationToken.objects.create(
         organization=organization,
         name="Staff Token",
@@ -213,7 +213,7 @@ def test_delete_staff_granting_token_by_non_owner_returns_403(
     organization: Organization, organization_staff_user: RevelUser, organization_owner_user: RevelUser
 ) -> None:
     """Staff with manage_members permission cannot delete a staff-granting token."""
-    default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+    default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
     staff_token = OrganizationToken.objects.create(
         organization=organization,
         name="Staff Token",
@@ -233,7 +233,7 @@ def test_delete_membership_only_token_by_non_owner_succeeds(
     organization: Organization, organization_staff_user: RevelUser, organization_owner_user: RevelUser
 ) -> None:
     """Staff with manage_members permission can delete a membership-only token (no staff grant)."""
-    default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+    default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
     member_token = OrganizationToken.objects.create(
         organization=organization,
         name="Member Token",
@@ -256,7 +256,7 @@ def test_create_token_with_grants_membership_only_succeeds(
     organization_owner_client: Client, organization: Organization
 ) -> None:
     """Token with only grants_membership=True can be created."""
-    default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+    default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
     url = reverse("api:create_organization_token", kwargs={"slug": organization.slug})
     payload = {
         "name": "Member Token",
@@ -290,7 +290,7 @@ def test_create_token_with_grants_staff_status_only_succeeds(
 
 def test_create_token_with_both_grants_succeeds(organization_owner_client: Client, organization: Organization) -> None:
     """Token with both grants_membership=True and grants_staff_status=True can be created."""
-    default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+    default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
     url = reverse("api:create_organization_token", kwargs={"slug": organization.slug})
     payload = {
         "name": "Full Access Token",
@@ -382,7 +382,7 @@ def test_update_token_disable_staff_when_membership_true_succeeds(
     organization_owner_user: RevelUser,
 ) -> None:
     """Disabling grants_staff_status on a token that has grants_membership=True succeeds."""
-    default_tier = MembershipTier.objects.get(organization=organization, name="General membership")
+    default_tier = MembershipTier.objects.get(organization=organization, name="Associação geral")
     staff_token = OrganizationToken.objects.create(
         organization=organization,
         name="Staff Token",

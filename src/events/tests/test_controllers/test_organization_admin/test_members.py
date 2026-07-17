@@ -229,7 +229,7 @@ class TestManageMembersAndStaff:
 
 def test_list_membership_tiers_by_staff(organization_staff_client: Client, organization: Organization) -> None:
     """Test that staff can list membership tiers."""
-    # Create some tiers (note: organization signal already creates "General membership")
+    # Create some tiers (note: organization signal already creates "Associação geral")
     MembershipTier.objects.create(organization=organization, name="Gold")
     MembershipTier.objects.create(organization=organization, name="Silver")
 
@@ -238,9 +238,9 @@ def test_list_membership_tiers_by_staff(organization_staff_client: Client, organ
 
     assert response.status_code == 200
     data = response.json()
-    assert len(data) == 3  # General membership + Gold + Silver
+    assert len(data) == 3  # Associação geral + Gold + Silver
     tier_names = {tier["name"] for tier in data}
-    assert tier_names == {"General membership", "Gold", "Silver"}
+    assert tier_names == {"Associação geral", "Gold", "Silver"}
 
 
 def test_list_membership_tiers_by_owner(organization_owner_client: Client, organization: Organization) -> None:
@@ -252,10 +252,10 @@ def test_list_membership_tiers_by_owner(organization_owner_client: Client, organ
 
     assert response.status_code == 200
     data = response.json()
-    assert len(data) == 2  # General membership + Premium
+    assert len(data) == 2  # Associação geral + Premium
     tier_names = {tier["name"] for tier in data}
     assert "Premium" in tier_names
-    assert "General membership" in tier_names
+    assert "Associação geral" in tier_names
 
 
 def test_list_membership_tiers_by_member_forbidden(member_client: Client, organization: Organization) -> None:
