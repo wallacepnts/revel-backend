@@ -1,6 +1,6 @@
 # Revel Backend
 
-**An open-source, community-focused event management platform.**
+**Backend do DuRock RJ — agenda e venda de ingressos pra shows de rock no Rio de Janeiro.**
 
 <!-- Status -->
 [![Status](https://img.shields.io/badge/status-Live-green?style=for-the-badge)](https://letsrevel.io)
@@ -27,35 +27,24 @@
 
 ## 🔗 Related Repositories
 
-This repository contains the **backend API and business logic** for Revel. The complete platform consists of:
+This repository contains the **backend API and business logic** for DuRock RJ. The complete platform consists of:
 
-- **[revel-backend](https://github.com/letsrevel/revel-backend)** (this repository) - Django Ninja REST API, business logic, database models
-- **[revel-frontend](https://github.com/letsrevel/revel-frontend)** - SvelteKit web application, user interface
-- **[infra](https://github.com/letsrevel/infra)** - Docker Compose setup, reverse proxy, observability stack, deployment configurations
+- **[revel-backend](https://github.com/DuRockRJ/revel-backend)** (this repository) - Django Ninja REST API, business logic, database models
+- **[revel-frontend](https://github.com/DuRockRJ/revel-frontend)** - SvelteKit web application, user interface
+- **[infra](https://github.com/DuRockRJ/infra)** - Docker Compose setup, reverse proxy, observability stack, deployment configurations
+- **[rockfeed-rj](https://github.com/wallacepnts/rockfeed-rj)** - Companion scraper that finds rock shows on ticket-selling sites and pushes them here as drafts for review
 
 ---
 
-Revel is an event management and ticketing platform designed with community at its heart. Initially created to serve the specific needs of queer, LGBTQ+, and sex-positive communities, it is built to be event-agnostic, scalable, and a powerful tool for any group that values privacy, control, and transparency.
+O **DuRock RJ** é uma agenda online e plataforma de venda de ingressos dedicada à cena de shows de rock (e gêneros próximos — metal, punk, hardcore, etc.) no estado do Rio de Janeiro, capital e interior. Organizadores cadastram e vendem ingressos pros seus próprios eventos; o `rockfeed-rj` complementa isso raspando sites de venda de ingresso em busca de shows de rock, que entram como rascunho pra revisão manual antes de publicar.
 
-Unlike monolithic, corporate platforms that treat events as transactions, Revel treats them as part of a larger community ecosystem.
+Este repositório é um fork do [Revel](https://github.com/letsrevel/revel-backend) — uma plataforma de gestão de eventos e ticketing open-source, criada originalmente para atender comunidades queer, LGBTQ+ e sex-positive — adaptado pro caso de uso específico do DuRock RJ.
 
 ---
 
 > 🤖 **AI disclosure:** Revel makes use of AI-assisted coding, but stays firmly away from vibe
 > coding. Every line that lands in `main` is understood, reviewed, and defended by a human.
 > If you contribute with AI, follow the workflow in **[AI_USAGE.md](AI_USAGE.md)**.
-
----
-
-### ✨ Live Demo
-
-You can try out an early version of Revel yourself at https://demo.letsrevel.io
-
-The api lives at https://demo-api.letsrevel.io/api/docs
-
-**NOTE:** Emails are dry, and the data is reset every day at 00:00 CET.
-
-More info on what's available [here](./src/events/management/commands/README.md).
 
 ---
 
