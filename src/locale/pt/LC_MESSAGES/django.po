@@ -783,7 +783,7 @@ msgid "Authentication required to access feedback questionnaire."
 msgstr ""
 
 msgid "The application deadline has passed."
-msgstr ""
+msgstr "O prazo para inscrição já passou."
 
 msgid "This invitation link has expired."
 msgstr ""
@@ -1105,87 +1105,89 @@ msgid "You have already used this discount code the maximum number of times."
 msgstr ""
 
 msgid "Only members are allowed."
-msgstr ""
+msgstr "Somente membros têm permissão."
 
 msgid "Your membership is not active."
-msgstr ""
+msgstr "Sua associação não está ativa."
 
 msgid "Requires full profile."
-msgstr ""
+msgstr "Requer perfil completo."
 
 msgid "Event is full."
-msgstr ""
+msgstr "O evento está lotado."
 
 msgid "Spots are currently reserved for waitlist members."
-msgstr ""
+msgstr "As vagas estão reservadas no momento para membros da lista de espera."
 
 msgid "You are on the waitlist. Waiting for your turn."
-msgstr ""
+msgstr "Você está na lista de espera. Aguardando sua vez."
 
 msgid "Sold out"
-msgstr ""
+msgstr "Esgotado"
 
 msgid "Questionnaire has not been filled."
-msgstr ""
+msgstr "O questionário ainda não foi preenchido."
 
 msgid "Questionnaire evaluation was insufficient."
-msgstr ""
+msgstr "A avaliação do questionário foi insuficiente."
 
 msgid "Waiting for questionnaire evaluation."
-msgstr ""
+msgstr "Aguardando avaliação do questionário."
 
 #, python-brace-format
 msgid ""
 "Questionnaire evaluation was insufficient. You can try again in {retry_on}."
 msgstr ""
+"A avaliação do questionário foi insuficiente. Você pode tentar novamente em"
+" {retry_on}."
 
 msgid "Requires a ticket."
-msgstr ""
+msgstr "Requer um ingresso."
 
 msgid "Must RSVP"
-msgstr ""
+msgstr "É necessário confirmar presença"
 
 msgid "Requires invitation."
-msgstr ""
+msgstr "Requer convite."
 
 msgid "Your invitation request is pending approval."
-msgstr ""
+msgstr "Sua solicitação de convite está aguardando aprovação."
 
 msgid "Your invitation request was rejected."
-msgstr ""
+msgstr "Sua solicitação de convite foi rejeitada."
 
 msgid "Requires purchase."
-msgstr ""
+msgstr "Requer compra."
 
 msgid "Nothing to purchase."
-msgstr ""
+msgstr "Nada para comprar."
 
 msgid "Event is not open."
-msgstr ""
+msgstr "O evento não está aberto."
 
 msgid "Event has finished."
-msgstr ""
+msgstr "O evento já terminou."
 
 msgid "The RSVP deadline has passed."
-msgstr ""
+msgstr "O prazo para confirmar presença já passou."
 
 msgid "Tickets are not currently on sale."
-msgstr ""
+msgstr "Os ingressos não estão à venda no momento."
 
 msgid "This ticket tier requires a specific membership tier."
-msgstr ""
+msgstr "Este tipo de ingresso requer um nível de associação específico."
 
 msgid "You are not allowed to participate in this organization's events."
-msgstr ""
+msgstr "Você não tem permissão para participar dos eventos desta organização."
 
 msgid "Additional verification required."
-msgstr ""
+msgstr "Verificação adicional necessária."
 
 msgid "Your verification request is pending approval."
-msgstr ""
+msgstr "Sua solicitação de verificação está aguardando aprovação."
 
 msgid "Your verification request was rejected."
-msgstr ""
+msgstr "Sua solicitação de verificação foi rejeitada."
 
 msgid "You are not eligible."
 msgstr ""
