@@ -13,10 +13,8 @@
 
 {% if context.registration_opens_at %}
 🎫 {% trans "Registration opens:" %} {{ context.registration_opens_at }}
-{% else %}
-🎫 {% trans "Registration is now open!" %}
 {% endif %}
 
-{% trans "View event details and register:" %} {{ context.event_url }}
+{% trans "View event:" %} {{ context.event_url }}
 
 {% include "notifications/email/_footer.txt" %}

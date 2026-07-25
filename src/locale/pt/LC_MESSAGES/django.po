@@ -2090,18 +2090,9 @@ msgstr "Até:"
 msgid "Registration opens:"
 msgstr "Inscrições abrem em:"
 
-msgid "Registration is now open!"
-msgstr "As inscrições já estão abertas!"
-
-msgid "View Event & Register"
-msgstr "Ver evento e se inscrever"
-
 #, python-format
 msgid "%(org)s has published a new event: %(event)s!"
 msgstr "%(org)s publicou um novo evento: %(event)s!"
-
-msgid "View event details and register:"
-msgstr "Ver detalhes do evento e se inscrever:"
 
 msgid "Event Reminder"
 msgstr "Lembrete de evento"

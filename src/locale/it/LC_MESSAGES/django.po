@@ -1157,7 +1157,8 @@ msgid "Only {available} spot(s) remaining in this sector."
 msgstr "Restano solo {available} posto/i in questo settore."
 
 msgid "This tier is sold on an external platform; use its external link."
-msgstr "Questo livello è venduto su una piattaforma esterna; usa il suo link esterno."
+msgstr ""
+"Questo livello è venduto su una piattaforma esterna; usa il suo link esterno."
 
 msgid "Unknown payment method."
 msgstr "Metodo di pagamento sconosciuto."
@@ -2253,18 +2254,15 @@ msgstr "Fino a:"
 msgid "Registration opens:"
 msgstr "Le iscrizioni aprono:"
 
-msgid "Registration is now open!"
-msgstr "Le iscrizioni sono ora aperte!"
-
-msgid "View Event & Register"
-msgstr "Visualizza evento e iscriviti"
+msgid "View Event"
+msgstr "Vai all'evento"
 
 #, python-format
 msgid "%(org)s has published a new event: %(event)s!"
 msgstr "%(org)s ha pubblicato un nuovo evento: %(event)s!"
 
-msgid "View event details and register:"
-msgstr "Visualizza i dettagli dell'evento e iscriviti:"
+msgid "View event:"
+msgstr "Vai all'evento:"
 
 msgid "Event Reminder"
 msgstr "Promemoria evento"
@@ -2486,9 +2484,6 @@ msgstr "Luogo:"
 msgid "Description:"
 msgstr "Descrizione:"
 
-msgid "View Event"
-msgstr "Vai all'evento"
-
 #, python-format
 msgid "%(org)s created a new event: %(event)s"
 msgstr "%(org)s ha creato un nuovo evento: %(event)s"
@@ -2503,9 +2498,6 @@ msgstr "Nuovo evento nella serie"
 msgid "New event in <strong>%(series)s</strong>: <strong>%(event)s</strong>"
 msgstr ""
 "Nuovo evento in <strong>%(series)s</strong>: <strong>%(event)s</strong>"
-
-msgid "View event:"
-msgstr "Vai all'evento:"
 
 msgid "New Contact Message"
 msgstr "Nuovo messaggio di contatto"
