@@ -157,11 +157,11 @@ def test_revenue_offline_full_refund_nets_out(
         status=Ticket.TicketStatus.ACTIVE,
     )
     ticket_service.mark_offline_ticket_refunded(ticket, cancelled_by=public_user)
-    eur = _by_currency(organization_owner_client.get(_revenue_url(event)).json())["EUR"]
-    assert Decimal(eur["gross"]) == Decimal("25.00")
-    assert Decimal(eur["refunds"]) == Decimal("25.00")
-    assert Decimal(eur["net"]) == Decimal("0.00")
-    assert eur["refunded_count"] == 1
+    brl = _by_currency(organization_owner_client.get(_revenue_url(event)).json())["BRL"]
+    assert Decimal(brl["gross"]) == Decimal("25.00")
+    assert Decimal(brl["refunds"]) == Decimal("25.00")
+    assert Decimal(brl["net"]) == Decimal("0.00")
+    assert brl["refunded_count"] == 1
 
 
 def test_revenue_offline_status_boundaries(
@@ -186,10 +186,10 @@ def test_revenue_offline_status_boundaries(
     Ticket.objects.create(  # pending offline -> not paid
         guest_name="g", user=nonmember_user, event=event, tier=offline_tier, status=Ticket.TicketStatus.PENDING
     )
-    eur = _by_currency(organization_owner_client.get(_revenue_url(event)).json())["EUR"]
-    assert Decimal(eur["gross"]) == Decimal("55.00")
-    assert Decimal(eur["net"]) == Decimal("55.00")
-    assert eur["sold_count"] == 2
+    brl = _by_currency(organization_owner_client.get(_revenue_url(event)).json())["BRL"]
+    assert Decimal(brl["gross"]) == Decimal("55.00")
+    assert Decimal(brl["net"]) == Decimal("55.00")
+    assert brl["sold_count"] == 2
 
 
 def test_revenue_pending_only_omitted(
@@ -228,11 +228,11 @@ def test_revenue_offline_partial_refund_keeps_remainder(
     )
     # Collected 25.00, refund only 10.00 -> kept 15.00.
     ticket_service.mark_offline_ticket_refunded(ticket, cancelled_by=public_user, refund_amount=Decimal("10.00"))
-    eur = _by_currency(organization_owner_client.get(_revenue_url(event)).json())["EUR"]
-    assert Decimal(eur["gross"]) == Decimal("25.00")
-    assert Decimal(eur["refunds"]) == Decimal("10.00")
-    assert Decimal(eur["net"]) == Decimal("15.00")
-    assert eur["refunded_count"] == 1
+    brl = _by_currency(organization_owner_client.get(_revenue_url(event)).json())["BRL"]
+    assert Decimal(brl["gross"]) == Decimal("25.00")
+    assert Decimal(brl["refunds"]) == Decimal("10.00")
+    assert Decimal(brl["net"]) == Decimal("15.00")
+    assert brl["refunded_count"] == 1
 
 
 def test_revenue_pwyc_price_paid_override(
@@ -250,9 +250,9 @@ def test_revenue_pwyc_price_paid_override(
         status=Ticket.TicketStatus.ACTIVE,
         price_paid=Decimal("12.00"),
     )
-    eur = _by_currency(organization_owner_client.get(_revenue_url(event)).json())["EUR"]
-    assert Decimal(eur["gross"]) == Decimal("12.00")
-    assert eur["sold_count"] == 1
+    brl = _by_currency(organization_owner_client.get(_revenue_url(event)).json())["BRL"]
+    assert Decimal(brl["gross"]) == Decimal("12.00")
+    assert brl["sold_count"] == 1
 
 
 def test_revenue_requires_manage_tickets(member_client: Client, event: Event) -> None:
