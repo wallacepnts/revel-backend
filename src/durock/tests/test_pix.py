@@ -1,8 +1,8 @@
-"""Tests for the Pix BR Code payload/QR generation (events.utils.pix)."""
+"""Tests for the Pix BR Code payload/QR generation (durock.pix)."""
 
 from decimal import Decimal
 
-from events.utils.pix import _crc16_ccitt, build_pix_payload, generate_pix_qr_code_png
+from durock.pix import _crc16_ccitt, build_pix_payload, generate_pix_qr_code_png
 
 
 def _parse_tlv(payload: str) -> dict[str, str]:
