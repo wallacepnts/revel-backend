@@ -580,6 +580,27 @@ UNFOLD = {
                     },
                 ],
             },
+            # DuRock RJ. The sidebar is an explicit list, not a scan of
+            # INSTALLED_APPS, so an app that is not named here is reachable by
+            # URL and invisible in the menu. Appended last to keep the diff off
+            # the groups upstream edits.
+            {
+                "title": _("DuRock"),
+                "separator": True,
+                "collapsible": True,
+                "items": [
+                    {
+                        "title": _("Pix keys"),
+                        "icon": "qr_code_2",
+                        "link": reverse_lazy("admin:durock_organizationpixconfig_changelist"),
+                    },
+                    {
+                        "title": _("Pix charges"),
+                        "icon": "receipt",
+                        "link": reverse_lazy("admin:durock_pixcharge_changelist"),
+                    },
+                ],
+            },
         ],
     },
 }
