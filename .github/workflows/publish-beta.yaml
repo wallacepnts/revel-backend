@@ -110,15 +110,15 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ghcr.io/letsrevel/revel:beta
-            ghcr.io/letsrevel/revel:beta-${{ steps.sha.outputs.short }}
+            ghcr.io/${{ github.repository_owner }}/revel:beta
+            ghcr.io/${{ github.repository_owner }}/revel:beta-${{ steps.sha.outputs.short }}
 
       - name: Summary
         run: |
           {
             echo "### 🧪 Beta image published"
             echo ""
-            echo '`ghcr.io/letsrevel/revel:beta` → `beta-${{ steps.sha.outputs.short }}`'
+            echo '`ghcr.io/${{ github.repository_owner }}/revel:beta` → `beta-${{ steps.sha.outputs.short }}`'
             echo ""
             echo 'Deploying automatically — see the **Deploy Beta** job.'
           } >> "$GITHUB_STEP_SUMMARY"

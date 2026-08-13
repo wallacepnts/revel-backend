@@ -78,8 +78,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ghcr.io/letsrevel/revel:latest
-            ghcr.io/letsrevel/revel:${{ steps.version.outputs.version }}
+            ghcr.io/${{ github.repository_owner }}/revel:latest
+            ghcr.io/${{ github.repository_owner }}/revel:${{ steps.version.outputs.version }}
 
       - name: Notify Discord
         continue-on-error: true
@@ -95,7 +95,7 @@ jobs:
           # Build the JSON with jq so the interpolated values are escaped, not
           # spliced into the shell/JSON as GitHub Actions expressions.
           payload=$(jq -n --arg v "$VERSION" --arg url "$RELEASE_URL" \
-            '{content: "📦 `ghcr.io/letsrevel/revel:\($v)` is published and ready to deploy — \($url)"}')
+            '{content: "📦 `ghcr.io/${{ github.repository_owner }}/revel:\($v)` is published and ready to deploy — \($url)"}')
           curl -sf --max-time 10 -X POST "$DISCORD_WEBHOOK_URL" \
             -H "Content-Type: application/json" \
             -d "$payload"
