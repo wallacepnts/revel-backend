@@ -5,7 +5,7 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("events", "0093_tickettier_external_ticket_url_and_more"),
+        ("events", "0114_event_place_of_supply"),
     ]
 
     operations = [

@@ -38,7 +38,8 @@ def rename_back(apps: migrations.state.Apps, schema_editor: t.Any) -> None:
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("events", "0096_remove_event_public_pronoun_distribution_and_more"),
+        ("durock", "0001_seed_legal_documents"),
+        ("events", "0114_event_place_of_supply"),
     ]
 
     operations = [

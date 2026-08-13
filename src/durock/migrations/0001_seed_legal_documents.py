@@ -258,7 +258,7 @@ def reverse_seed(apps, schema_editor):
 
 class Migration(migrations.Migration):
     dependencies = [
-        ("common", "0016_alter_exchangerate_base"),
+        ("common", "0015_alter_fileexport_export_type"),
     ]
 
     operations = [

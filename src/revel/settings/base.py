@@ -84,6 +84,8 @@ INSTALLED_APPS = [
     "geo",
     "notifications",
     "wallet",
+    # DuRock RJ fork: keeps this fork's migrations out of upstream apps
+    "durock",
 ]
 
 if SILK_PROFILER:
